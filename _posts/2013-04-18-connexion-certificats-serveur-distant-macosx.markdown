@@ -10,41 +10,41 @@ Dans cet article nous allons créer une clé SSH sur notre client sous MAC OS X,
 
 <h1>Création d'une clé</h1>
 Ouvrons un <strong>terminal</strong> et créons la clé :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 ssh-keygen -t rsa -b 2048
-</pre>
+{% endhighlight %}
 
 Deux questions vont-vous être posés :
 La première concerne le fichier ou sera stockée votre clé privée. Si vous n'en avez pas une de générée. Vous pouvez conserver ce nom de fichier.
 
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/ludovic/.ssh/id_rsa):
-</pre>
+{% endhighlight %}
 
 La seconde est un mot de passe pour protéger votre clé privée :
-<pre>
+{% highlight shell %}
 Enter passphrase (empty for no passphrase):
-</pre>
+{% endhighlight %}
 
 Pour des raisons de sécurité <strong>je vous conseille fortement</strong> de mettre un mot de passe. Si jamais quelqu'un récupère votre clé qui n'est pas protégé il pourra se connecter sur l'ensemble des serveurs, usurper votre identité ...
 
 <h1>Copie de la clé sur le serveur distant</h1>
 
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
-cat ~/.ssh/id_rsa.pub | ssh utilisateur@ip-serveur &quot;umask 077; mkdir -p .ssh ; cat &gt;&gt; .ssh/authorized_keys&quot;
-</pre>
+{% highlight shell %}
+cat ~/.ssh/id_rsa.pub | ssh utilisateur@ip-serveur "umask 077; mkdir -p .ssh ; cat &gt;&gt; .ssh/authorized_keys"
+{% endhighlight %}
 
 Après avoir entré votre mot de passe, Vous pourrez vous connecter sur votre serveur sans mot de passe.
 
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 ssh utilisateur@ip-serveur
-</pre>
+{% endhighlight %}
 
 <strong>Note importante </strong> : Si vous avez changé le nom du fichier de votre clé, il faut l'indiquer lors de votre connexion.
 
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 ssh utilisateur@ip-serveur -i cheminverslaclé/macle
-</pre>
+{% endhighlight %}
 
 Si vous utilisez des clés différentes pour vous connecter à votre serveur, je vous suggère de vous renseigner sur le fichier ~/.ssh/config

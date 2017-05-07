@@ -13,68 +13,73 @@ Nous allons dans un premier temps activer la fonction TUN/TAP du noyau linux sur
 conteneur est <strong>l'identifiant de la machine</strong> où l'on installera OpenVPN
 
 Pour les deux commandes suivantes le <strong>conteneur doit être éteint</strong> ! Après avoir éteint le conteneur <strong>executez les commandes depuis l'hyperviseur</strong> (Votre serveur Proxmox).
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
-vzctl set &lt;em&gt;conteneur&lt;/em&gt; --devices c:10:200:rw --save
-vzctl set &lt;em&gt;conteneur&lt;/em&gt; --capability net_admin:on --save
-</pre>
-&nbsp;
+{% highlight shell %}
+vzctl set <em>conteneur</em> --devices c:10:200:rw --save
+vzctl set <em>conteneur</em> --capability net_admin:on --save
+{% endhighlight %}
+
 
 Vous pouvez à présent rallumer votre conteneur.
 
 Toujours depuis votre serveur Proxmox exécutez les commandes suivantes :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
-vzctl exec &lt;em&gt;conteneur&lt;/em&gt; mkdir -p /dev/net vzctl exec &lt;em&gt;conteneur&lt;/em&gt;
+{% highlight shell %}
+vzctl exec <em>conteneur</em> mkdir -p /dev/net vzctl exec <em>conteneur</em>
 mknod /dev/net/tun c 10 200
-vzctl exec &lt;em&gt;conteneur&lt;/em&gt; chmod 600 /dev/net/tun
-</pre>
+vzctl exec <em>conteneur</em> chmod 600 /dev/net/tun
+{% endhighlight %}
 
 Il faut maintenant activer le module NAT d'iptable pour les conteneurs car par défaut celui-ci n'est pas activé. Sans activer ce module vous ne pourriez pas voir les machines virtuelles de votre réseau.
 
 Faites une copie du fichier /etc/vz/vz.conf
 
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
-cp /etc/vz/vz.conf /etc/vz/vz.conf.original</pre>
+{% highlight shell %}
+cp /etc/vz/vz.conf /etc/vz/vz.conf.original
+{% endhighlight %}
 
 Modifiez la variable IPTABLES de /etc/vz/vz.conf de votre hyperviseur en mettant ceci :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
-IPTABLES=&quot;iptable_filter iptable_mangle ipt_limit ipt_multiport
+{% highlight shell %}
+IPTABLES="iptable_filter iptable_mangle ipt_limit ipt_multiport
 ipt_tos ipt_TOS ipt_REJECT ipt_TCPMSS ipt_tcpmss ipt_ttl ipt_LOG
 ipt_length ip_conntrack ip_conntrack_ftp ip_conntrack_irc ipt_conntrack
 ipt_state ipt_helper iptable_nat ip_nat_ftp ip_nat_irc ipt_REDIRECT
-ipt_LOG&quot;</pre>
+ipt_LOG"
+{% endhighlight %}
+
 
 Redémarrez à nouveau votre conteneur.
 
 Ensuite depuis votre conteneur il faut exécuter la commande suivante :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+
+{% highlight shell %}
 iptables -A POSTROUTING -o venet0 -j SNAT --to-source adresseIpDeVotreConteneur
-</pre>
+{% endhighlight %}
 A présent installons OpenVPN.
 
 Depuis votre conteneur exécutez la commande suivante :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 # apt-get instal openvpn</pre>
+{% endhighlight %}
 
 Il faut à présenter copier les fichiers de configuration et le scripts qui vont nous permettre de générer les certificats pour le serveur et les clients.
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 mkdir /etc/openvpn/easy-rsa/
 cp -r /usr/share/doc/openvpn/examples/easy-rsa/2.0/* /etc/openvpn/easy-rsa/
 chown -R openvpn /etc/openvpn/easy-rsa/
-</pre>
+{% endhighlight %}
 
 Editons le fichier de configuration par défaut afin de donner les bons paramètres aux certificats que nous allons générer.
 
 Dans le fichier /etc/openvpn/easy-rsa/vars modifions les lignes suivantes :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
-export KEY_COUNTRY=&quot;Pays&quot;
-export KEY_PROVINCE=&quot;Etat&quot;
-export KEY_CITY=&quot;MA Ville&quot;
-export KEY_ORG=&quot;Nom de mon Orgranisation&quot;
-export KEY_EMAIL=&quot;email@email.com&quot;
-</pre>
+{% highlight shell %}
+export KEY_COUNTRY="Pays"
+export KEY_PROVINCE="Etat"
+export KEY_CITY="MA Ville"
+export KEY_ORG="Nom de mon Orgranisation"
+export KEY_EMAIL="email@email.com"
+{% endhighlight %}
 
 Générons les certificats pour le serveur :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 cd /etc/openvpn/easy-rsa/
 source vars
 ./clean-all
@@ -82,15 +87,15 @@ source vars
 ./pkitool --initca
 ./pkitool --server server
 openvpn --genkey --secret keys/ta.key
-</pre>
+{% endhighlight %}
 
 Copions les fichiers générés et utile à OpenVPN.
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 # cp keys/ca.crt keys/ta.key keys/server.crt keys/server.key keys/dh1024.pem /etc/openvpn/
-</pre>
+{% endhighlight %}
 
 Créons le fichier de configuration du serveur :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 # Serveur TCP/443
 mode server
 proto tcp
@@ -105,9 +110,9 @@ tls-auth ta.key 0
 cipher AES-256-CBC
 # Reseau
 server 10.8.0.0 255.255.255.0
-push &quot;redirect-gateway def1 bypass-dhcp&quot;
-push &quot;dhcp-option DNS 4.4.4.4&quot;
-push &quot;dhcp-option DNS 8.8.8.8&quot;
+push "redirect-gateway def1 bypass-dhcp"
+push "dhcp-option DNS 4.4.4.4"
+push "dhcp-option DNS 8.8.8.8"
 keepalive 10 120
 # Securite
 user nobody
@@ -121,25 +126,25 @@ verb 3
 mute 20
 status openvpn-status.log
 log-append /var/log/openvpn.log
-</pre>
+{% endhighlight %}
 
 Nous pouvons à présent lancer OpenVpn
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 # /etc/init.d/openvpn start
-</pre>
+{% endhighlight %}
 
 Vérifions dans le fichier Log que l'on trouve bien la mention "Initialization Sequence Completed" ce qui signifie que tout s'est bien passé !
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 cat /var/log/openvpn.log
-</pre>
+{% endhighlight %}
 
 Nous allons dans un sous dossier le fichier de configuration de base que devront avoir les clients :
 
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 mkdir /etc/openvpn/defaut/
-</pre>
+{% endhighlight %}
 
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 # Configuraiton client
 client
 dev tun
@@ -158,40 +163,40 @@ persist-key
 persist-tun
 comp-lzo
 verb 3
-</pre>
+{% endhighlight %}
 
 Puis pour nos clients :
 
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 cd /etc/openvpn/easy-rsa
 # source vars
 # ./build-key macle
-</pre>
+{% endhighlight %}
 
 
 
 Nous allons afin de bien nous organiser stocker les clés et les configuration dans un dossier :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 mkdir /etc/openvpn/clientconf/macle/
 sudo cp /etc/openvpn/ca.crt /etc/openvpn/ta.key keys/macle.crt keys/macle.key /etc/openvpn/defaut/client.conf /etc/openvpn/clientconf/maclé/
-</pre>
+{% endhighlight %}
 
 Modifions le fichier client.conf pour y mettre les bonnes valeurs des clés clients :
 nano /etc/openvpn/clientconf/macle/client.conf
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 cert macle.crt
 key macle.key
-</pre>
+{% endhighlight %}
 
 Enfin pour rester compatible avec l'ensemble des clients OpenVpn faisons une copie de client.conf en client.ovpn
 
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 cp  /etc/openvpn/clientconf/macle/client.conf /etc/openvpn/clientconf/macle/client.ovpn
-</pre>
+{% endhighlight %}
 
 Vous pouvez à présent envoyer ce dossier ou le mettre au format zip pour que les utilisateurs puissent accèder au VPN.
 
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 # cd /etc/openvpn/clientconf/macle/
 # zip macle.zip *.*
-</pre>
+{% endhighlight %}

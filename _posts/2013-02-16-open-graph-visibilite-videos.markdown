@@ -22,17 +22,17 @@ Si vous utilisez WordPress, il faut se servir d’un plugin pour personnaliser l
 
 En voici quelques exemples :
 
-<pre class="brush: html; gutter: true; first-line: 1; highlight: []; html-script: false">
-&lt;meta property=&quot;og:video&quot; content=&quot;http://example.com/movie.swf&quot; /&gt;
-&lt;meta property=&quot;og:video:secure_url&quot; content=&quot;https://secure.example.com/movie.swf&quot; /&gt;
-&lt;meta property=&quot;og:video:type&quot; content=&quot;application/x-shockwave-flash&quot; /&gt;
-&lt;meta property=&quot;og:video:width&quot; content=&quot;400&quot; /&gt;
-&lt;meta property=&quot;og:video:height&quot; content=&quot;300&quot; /&gt;
-&lt;meta property=&quot;og:image&quot; content=&quot;http://example.com/ogp.jpg&quot; /&gt;
-&lt;meta property=&quot;og:image:type&quot; content=&quot;image/jpeg&quot; /&gt;
-&lt;meta property=&quot;og:image:width&quot; content=&quot;400&quot; /&gt;
-&lt;meta property=&quot;og:image:height&quot; content=&quot;300&quot; /&gt;
-</pre>
+{% highlight html %}
+<meta property="og:video" content="http://example.com/movie.swf" />
+<meta property="og:video:secure_url" content="https://secure.example.com/movie.swf" />
+<meta property="og:video:type" content="application/x-shockwave-flash" />
+<meta property="og:video:width" content="400" />
+<meta property="og:video:height" content="300" />
+<meta property="og:image" content="http://example.com/ogp.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="300" />
+{% endhighlight %}
 Expliquons ceci plus en détail :
 <table>
 <tr><td>og:video</td><td>Lien vers le fichier vidéo ou un player vidéo Flash avec comme paramètre l’URL de la vidéo</td></tr>

@@ -2,7 +2,7 @@
 layout: post
 title:  "Créer un repository de Bundles privés avec Satis"
 date:   2013-04-29 21:25:00 +0200
-categories: développement 
+categories: développement
 ---
 Prérequis :
 <ul>
@@ -24,80 +24,80 @@ Nous allons dans un premier temps installer satis sur le serveur qui assurera la
 composer.phar create-project composer/satis --stability=dev
 </pre>
 La configuration de l'outil se fait à travers un fichier JSON que nous appellerons satis.json à la racine du repertoire.
-<pre class="brush: javascript; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight javascript %}
 {
-    &quot;name&quot;: &quot;MonEntreprise&quot;,
-    &quot;homepage&quot;: &quot;https://packages.kalyzee.local&quot;,
-    &quot;repositories&quot;: [
-        { &quot;type&quot;: &quot;svn&quot;, &quot;url&quot;: &quot;https://intranet.kalyzee.local/svn/test-2/&quot; }
+    "name": "MonEntreprise",
+    "homepage": "https://packages.kalyzee.local",
+    "repositories": [
+        { "type": "svn", "url": "https://intranet.kalyzee.local/svn/test-2/" }
     ],
-    &quot;require-all&quot;: true
+    "require-all": true
 }
 
-</pre>
+{% endhighlight %}
 
 Notre repository est composé de deux projets en version 1.0.0 et leurs sources sont accessible dans la partie trunk. Vous pouvez utiliser SVN, Git ou d'autres outils; la condition est que chaque client que vous utilisez doit être installé sur les postes des développeurs.
 
 Dans chaque repository cité il doit y avoir dans le trunk et / ou dans les branches et / ou dans les tags un fichier composer.json :
 
-<pre class="brush: javascript; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight javascript %}
 {
-    &quot;name&quot;: &quot;mon-entreprise/test-2&quot;,
-    &quot;description&quot;: &quot;Test-2 bundle for Symfony 2&quot;,
-    &quot;keywords&quot;: [&quot;Test&quot;,&quot;bundle&quot;],
-    &quot;type&quot;: &quot;symfony-bundle&quot;,
-    &quot;license&quot;: &quot;Commercial&quot;,
-    &quot;authors&quot;: [
+    "name": "mon-entreprise/test-2",
+    "description": "Test-2 bundle for Symfony 2",
+    "keywords": ["Test","bundle"],
+    "type": "symfony-bundle",
+    "license": "Commercial",
+    "authors": [
         {
-            &quot;name&quot;: &quot;Ludovic Bouguerra&quot;,
-            &quot;email&quot;: &quot;bouguerra.ludovic@gmail.com&quot;
+            "name": "Ludovic Bouguerra",
+            "email": "bouguerra.ludovic@gmail.com"
         }
     ],
-    &quot;require&quot;: {
-        &quot;symfony/framework-bundle&quot;: &quot;2.*&quot;,
-        &quot;twig/twig&quot;: &quot;1.*&quot;
+    "require": {
+        "symfony/framework-bundle": "2.*",
+        "twig/twig": "1.*"
     },
-    &quot;autoload&quot;: {
-        &quot;psr-0&quot;: { &quot;MonEntreprise\\Test2&quot;: &quot;&quot; }
+    "autoload": {
+        "psr-0": { "MonEntreprise\\Test2": "" }
     },
-    &quot;target-dir&quot;: &quot;MonEntreprise/Test2&quot;
+    "target-dir": "MonEntreprise/Test2"
 
 }
-</pre>
+{% endhighlight %}
 
 Après avoir réalisé cela il faut lancer la commande suivante pour mettre à jour l'annuaire : (A effectuer à la racine de l'application satis ) :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight bash %}
 php bin/satis build satis.json web/
-</pre>
+{% endhighlight %}
 
 Le resultat de cette analyse se trouvera donc dans le dossier web :
-<pre>
-web/index.html -&gt; Fichier présentant l&#039;annuaire des repositories disponibles pour les visiteurs.
-web/packages.json -&gt; Fichier json utilisé par composer.json
-</pre>
+{% highlight bash %}
+web/index.html -> Fichier présentant l&#039;annuaire des repositories disponibles pour les visiteurs.
+web/packages.json -> Fichier json utilisé par composer.json
+{% endhighlight %}
 
 
 Lors de la première installation il faudra faire un virtualhost vers le dossier web de votre application symfony :
 
-<pre>
-&lt;VirtualHost *:80&gt;
+{% highlight bash %}
+<VirtualHost *:80>
                 ServerName packages.monentreprise.org
 
                 DocumentRoot /home/ftp/org/monentreprise/packages/html/web
                 ErrorLog     /home/ftp/org/monentreprise/packages/logs/errors.log
 
-                &lt;Directory /&gt;
+                <Directory />
                         Options FollowSymLinks
                         AllowOverride All
-                &lt;/Directory&gt;
-                &lt;Directory /home/ftp/org/monentreprise/packages/html/web&gt;
+                </Directory>
+                <Directory /home/ftp/org/monentreprise/packages/html/web>
                         Options Indexes FollowSymLinks MultiViews
                         AllowOverride All
                         Order allow,deny
                         allow from all
-                &lt;/Directory&gt;
-&lt;/VirtualHost&gt;
-</pre>
+                </Directory>
+</VirtualHost>
+{% endhighlight %}
 
 Cet outil est très interessant pour les entreprises qui développent leurs propre bundle
 
@@ -107,34 +107,34 @@ en vous rendant à l'URL suivante vous aurez les instructions pour intégrer ce 
 http://packages.monentreprise.org/
 </pre>
 
-<pre class="brush: javascript; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight javascript %}
 {
-    &quot;repositories&quot;: [
+    "repositories": [
         {
-            &quot;type&quot;: &quot;composer&quot;,
-            &quot;url&quot;: &quot;http://packages.monenetreprise.org&quot;
+            "type": "composer",
+            "url": "http://packages.monenetreprise.org"
         }
     ]
 }
-</pre>
+{% endhighlight  %}
 
 A présent si vous souhaitez utiliser le bundle Test2 dans un nouveau projet il suffira d'ajouter :
-<pre class="brush: javascript; gutter: true; first-line: 1; highlight: []; html-script: false">
-    &quot;repositories&quot;: [
+{% highlight javascript %}
+    "repositories": [
         {
-            &quot;type&quot;: &quot;composer&quot;,
-            &quot;url&quot;: &quot;http://packages.monentreprise.org&quot;
+            "type": "composer",
+            "url": "http://packages.monentreprise.org"
         }
     ],
-    &quot;require&quot;: {
+    "require": {
         [...]
-        &quot;mon-entreprise/test-2&quot;: &quot;dev-trunk&quot;
+        "mon-entreprise/test-2": "dev-trunk"
     },
 
-</pre>
+{% endhighlight %}
 
 En faisant :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">
+{% highlight shell %}
 php composer.phar update
-</pre>
+{% endhighlight %}
 Vous devriez pouvoir utiliser la dernière version de votre bundle Test2.

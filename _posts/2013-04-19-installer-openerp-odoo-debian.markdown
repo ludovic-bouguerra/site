@@ -34,34 +34,42 @@ Afin de faire les choses proprements nous allons devoir :
 
 Important : Votre installation de PostgreSQL doit accepter l'encodage UTF-8
 <strong>A effectuer uniquement sur des bases de données qui ne sont pas en production !</strong>
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">pg_dropcluster --stop 8.4 main
+{% highlight shell %}
 pg_createcluster --start -e UTF-8 8.4 main
-</pre>
+{% endhighlight %}
 Création d'un utilisateur OPENERP et d'une base de donnée OPENERP
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">su - postgres
+{% highlight shell %}
 psql
 CREATE ROLE openerp WITH ENCRYPTED PASSWORD &#039;123456&#039; LOGIN;
 CREATE DATABASE openerp WITH OWNER openerp;
 \q
 exit
-</pre>
+{% endhighlight %}
 Seconde étape installation d'OpenErp.
 
 Ajoutons dans le fichiers sources.list (/etc/apt/sources.list)
 les lignes suivantes :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">deb http://nightly.openerp.com/7.0/nightly/deb/ ./
-</pre>
+{% highlight shell %}
+deb http://nightly.openerp.com/7.0/nightly/deb/ ./
+{% endhighlight %}
+
 Puis lancer :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">sudo apt-get update
+{% highlight shell %}
+sudo apt-get update
 sudo apt-get install openerp
-</pre>
+{% endhighlight %}
 Arrêtons openerp qui s'est lancé automatiquement :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">/etc/init.d/openerp stop
-</pre>
+{% highlight shell %}
+/etc/init.d/openerp stop
+{% endhighlight %}
+
 Modifiez le fichier en remplissant les informations sur votre base de donnée :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">nano /etc/openerp-server/openerp-server.conf
-</pre>
-<pre>; This is the password that allows database operations:
+{% highlight shell %}
+nano /etc/openerp-server/openerp-server.conf
+{% endhighlight %}
+
+{% highlight shell %}
+; This is the password that allows database operations:
 ; admin_passwd = admin
 db_host = 10.0.0.11
 db_port = 5432
@@ -69,10 +77,11 @@ db_user = openerp
 db_password = 123456
 db_name = openerp
 without_demo = all
-</pre>
+{% endhighlight %}
 Relançons openerp :
-<pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">/etc/init.d/openerp start
-</pre>
+{% highlight shell %}
+/etc/init.d/openerp start
+{% endhighlight %}
 Il faut à présenter se connecter sur l'interface d'administration.
 
 http://[AdresseIPdeVotreServeur]:8069

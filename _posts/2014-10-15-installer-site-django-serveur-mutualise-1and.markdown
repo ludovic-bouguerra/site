@@ -30,7 +30,7 @@ unzip flup*
 mv flup ~/.local/lib/python*/site-packages/
 </pre>
 A présent testons le bon fonctionnement :
-<pre class="brush: bash; gutter: true">python -c &quot;import django&quot;
+<pre class="brush: bash; gutter: true">python -c "import django"
 </pre>
 Cette ligne ne devrait pas retourner d'erreur.
 
@@ -39,11 +39,13 @@ Création d'un dossier pour l'application
 <pre class="brush: bash; gutter: true">mkdir web
 </pre>
 Création d'un dossier public pour le serveur web.
-<pre class="brush: bash; gutter: true">
+
+{% highlight bash %}
 mkdir app
-</pre>
+{% endhighlight %}
+
 Création d'un fichier .htaccess
-<pre class="brush: bash; gutter: true">
+{% highlight bash %}
 AddHandler fcgid-script .fcgi
 RewriteEngine on
 RewriteBase /
@@ -58,40 +60,43 @@ RewriteCond %{REQUEST_FILENAME} !(cgi-bin/main.fcgi)
 RewriteRule     ^(.*)$                  cgi-bin/main.fcgi/$1    [QSA,L]
 
 
-</pre>
+{% endhighlight %}
 
 Création d'un fichier main.fcgi qui aura pour but de lancer l'application. Ce fichier devra être mis dans un nouveau dossier cgi-bin qui lui sera dans le dossier web.
-<pre class="brush: bash; gutter: true">
+{% highlight bash %}
 cd web
 mkdir cgi-bin
 nano main.fcgi
-</pre>
+{% endhighlight %}
 
 Le contenu du fichier se trouve ci-dessous.
 
-<pre class="brush: python; gutter: true">
+{% highlight python %}
 #!/usr/bin/python
 import sys, os
 
-basepath = &quot;/../htdocs&quot;;
+basepath = "/../htdocs";
 
-sys.path.insert(0, basepath + &quot;/.local/lib&quot;)
-sys.path.insert(0, basepath + &quot;/.../app&quot;)
+sys.path.insert(0, basepath + "/.local/lib")
+sys.path.insert(0, basepath + "/.../app")
 
 os.environ[DJANGO_SETTINGS_MODULE] = mon_projet.settings_production
 
 from django.core.servers.fastcgi import runfastcgi
 runfastcgi(method=threaded, daemonize=false)
-</pre>
+{% endhighlight %}
 
 Changement des droits pour ce fichier :
 
-<pre class="brush: bash; gutter: true">chmod 511 main.fcgi
-</pre>
+{% highlight bash %}
+chmod 511 main.fcgi
+{% endhighlight %}
 
 Créez un dossier static dans le dossier web. Faites pointer le dossier staticfiles dans votre configuration de Django et faite appel à la commande collectstatic
-<pre class="brush: bash; gutter: true">python manage.py collectstatic
-</pre>
+{% highlight bash %}
+python manage.py collectstatic
+{% endhighlight %}
+
 
 Vos fichiers statiques doivent être à présent accessibles.
 

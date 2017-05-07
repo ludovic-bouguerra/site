@@ -84,20 +84,20 @@ Sous OpenERP les vues sont générées à partir de fichiers XML. Nous allons do
 [caption id="attachment_550" align="aligncenter" width="1024"]<a href="http://www.ludovicbouguerra.fr/wp-content/uploads/2014/05/openerp-fiche-client-basique.png"><img class="wp-image-550 size-large" src="http://www.ludovicbouguerra.fr/wp-content/uploads/2014/05/openerp-fiche-client-basique-1024x597.png" alt="Fiche client basique" width="1024" height="597" /></a> Fiche client basique[/caption]
 
 Nous allons ajouter ce champ après le Site WEB. Pour cela nous allons ajouter après cette ligne là
-[code]
-&lt;field name="website" widget="url" placeholder="e.g. www.openerp.com"/&gt;
-[/code]
+{% highlight bash %}
+<field name="website" widget="url" placeholder="e.g. www.openerp.com"/>;
+{% endhighlight %}
 
 et avant celle-ci
-[code]
+{% highlight bash %}
 
-&lt;/group&gt;
+</group>;
 
-[/code]
-[code]
-&lt;field name="x_siret" widget="text" domain="[('is_company', '=', True)]" attrs="{'invisible': [('is_company','!=', True)]}"/&gt;
+{% endhighlight %}
+{% highlight bash %}
+<field name="x_siret" widget="text" domain="[('is_company', '=', True)]" attrs="{'invisible': [('is_company','!=', True)]}"/>;
 
-[/code]
+{% endhighlight %}
 
 Quelques explications :
 Avec cette ligne nous précisons que nous souhaitons afficher le champs "x_siret" (&lt;field name="x_siret") et qu'il soit visible uniquement si c'est une entreprise. ( attrs="{'invisible': [('is_company','!=', True)]}"/&gt;)
