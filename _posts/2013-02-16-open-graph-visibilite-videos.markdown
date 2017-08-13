@@ -2,7 +2,7 @@
 layout: post
 title:  "Facebook : Utiliser les Open Graph pour rendre vos vidéos visibles"
 date:   2013-01-16 20:58:00 +0200
-categories: video diffusion internet référencement
+categories: vidéo video diffusion internet référencement
 long_description: "Auparavant, si vous désiriez partager sur Facebook une vidéo qui se trouvait sur votre blog et était hébergée par YouTube, il était obligatoire de partager le lien YouTube et non le lien de votre blog. Malheureusement, de ce fait, l’utilisateur ne visitait pas votre site. Si vous souhaitez que vos vidéos puissent être lues directement depuis Facebook, vous devez utiliser Descripteurs OpenGraph"
 ---
 Auparavant, si vous désiriez partager sur Facebook une vidéo qui se trouvait sur votre blog et était hébergée par YouTube, il était obligatoire de partager le lien YouTube et non le lien de votre blog. Malheureusement, de ce fait, l’utilisateur ne visitait pas votre site.

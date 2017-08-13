@@ -2,7 +2,7 @@
 layout: post
 title:  "Installer votre Site Django sur un serveur mutualisé 1and1"
 date:   2014-10-15 11:01:00 +0200
-categories: django mutualisé 1and1
+categories: django 1and1
 long_description: Aujourd’hui les offres d’hébergement mutualisées ne sont plus uniquement compatibles avec PHP. Il est possible d’héberger des sites en Python, Ruby, Perl. Toutefois cela n’est pas sans limitations mais nous allons voir qu’il est assez simple d’installer un site développé en Python avec Django sous 1and1.
 
 ---
@@ -17,29 +17,32 @@ Depuis votre shell serveur téléchargez la version de Django correspondante :
 Vous trouverez les différentes version à cette page : https://www.djangoproject.com/download/
 
 Prenons par exemple la version 1.6.5
-<pre class="brush: bash; gutter: true">wget https://www.djangoproject.com/download/1.6.7/tarball/
+
+{% highlight bash %}
+wget https://www.djangoproject.com/download/1.6.7/tarball/
 tar xzf Django*tar.gz
 cd Django*/
 python setup.py install --user # Django will be installed to .local in your home folder
 cd ..
-</pre>
+{% endhighlight %}
+
 A présent nous allons télécharger flup :
 Vous trouverez les différentes versions ici : https://pypi.python.org/pypi/flup
 Téléchargez le fichier avec l'extension egg qui correspond à votre version de python.
 Dans notre cas :
-<pre class="brush: bash; gutter: true">wget https://pypi.python.org/packages/2.6/f/flup/flup-1.0.2-py2.5.egg#md5=93ec6e3baeee3e5649a8456105178d4e
+{% highlight bash %}wget https://pypi.python.org/packages/2.6/f/flup/flup-1.0.2-py2.5.egg#md5=93ec6e3baeee3e5649a8456105178d4e
 unzip flup*
 mv flup ~/.local/lib/python*/site-packages/
-</pre>
+{% endhighlight %}
 A présent testons le bon fonctionnement :
-<pre class="brush: bash; gutter: true">python -c "import django"
-</pre>
+{% highlight bash %}python -c "import django"
+{% endhighlight %}
 Cette ligne ne devrait pas retourner d'erreur.
 
 Configuration de l'environnement web.
 Création d'un dossier pour l'application
-<pre class="brush: bash; gutter: true">mkdir web
-</pre>
+{% highlight bash %}mkdir web
+{% endhighlight %}
 Création d'un dossier public pour le serveur web.
 
 {% highlight bash %}

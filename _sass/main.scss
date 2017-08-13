@@ -3,6 +3,7 @@
 @import "vendors/skeleton/layout";
 @import "vendors/font-awesome/font-awesome";
 @import "_variables.scss";
+@import "_syntax.scss";
 
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400);
@@ -715,3 +716,13 @@ ol {
 
 
   }
+
+code{
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  display: block;
+}
