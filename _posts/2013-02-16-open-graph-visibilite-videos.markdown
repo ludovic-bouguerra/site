@@ -19,7 +19,7 @@ Il faut utiliser <a href="http://index.activpik.com">Le service d'indexation vid
 
 Si vous utilisez WordPress, il faut se servir d’un plugin pour personnaliser les en-têtes de vos pages, en fonction par exemple d’un article de blog ou d’une autre page. <a href="https://github.com/ludovic-bouguerra/wppostcustomheader">Ce plugin vous permettra de personnaliser vos en-têtes pour chacun de vos articles</a>. Il vous suffira de le télécharger et de le copier dans le dossier « wp-content/plugin » de WordPress. Après l’avoir activé lors de l’édition de vos articles, vous pourrez ajouter des informations dans l’en-tête de votre page.
 
-<img alt="" src="http://www.ludovicbouguerra.fr/wp-content/uploads/2013/01/Capture-d’écran-2013-01-16-à-21.43.53.png" />
+<img alt="" src="/images/posts/open-graph-visibilite-videos/custom-header.png" />
 
 En voici quelques exemples :
 
@@ -54,6 +54,6 @@ Si vous souhaitez tester votre code, vous pouvez vous aider de Facebook Debugger
 Prenons par exemple cette page :
 http://www.activpik.com/embed/
 
- <img src="http://www.ludovicbouguerra.fr/wp-content/uploads/2013/01/Capture-d’écran-2013-01-16-à-22.20.40.png" />
+ <img src="/images/posts/open-graph-visibilite-videos/preview.png" />
 
 En la partageant sur Facebook, vous pourrez lire la vidéo directement depuis Facebook ; et en cliquant sur le lien, vous parviendrez à l’article du blog, et non à la plateforme qui héberge votre vidéo. Le trafic Web est donc redirigé sur votre blog et non sur YouTube ou assimilés. Mission accomplie !

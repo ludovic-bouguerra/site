@@ -42,15 +42,15 @@ A présent il faut installer Mysql :
 http://dev.mysql.com/downloads/mysql/
 
 Prenez la version qui correspond à votre Système d'exploitation (32 ou 64 bits).
-<img src="http://www.ludovicbouguerra.fr/wp-content/uploads/2013/02/installer-php-macosx-2.png" />
+<img src="/images/posts/installer-php-et-mysql-sur-mac-os-x/installer-php-macosx-2.png" />
 Installez les deux fichiers pkg : mysql-5.5.29-osx10.6-x86_64.pkg et MySQLStartupItem.pkg
 
 Puis executer le fichier MySQL.prefPane qui va vous permettre de controller le démarrage de Mysql dans les Préférences Système Mac OS X.
 
 Vous pouvez à présent controller l'exécution de Mysql au sein de vos Préférences Système :
-<img src="http://www.ludovicbouguerra.fr/wp-content/uploads/2013/02/installer-php-macosx-3.png" />
+<img src="/images/posts/installer-php-et-mysql-sur-mac-os-x/installer-php-macosx-3.png" />
 
-<img src="http://www.ludovicbouguerra.fr/wp-content/uploads/2013/02/installer-php-macosx-4.png" />
+<img src="/images/posts/installer-php-et-mysql-sur-mac-os-x/installer-php-macosx-4.png" />
 
 Enfin attribuons un mot de passe à votre utilisateur root exécutez la commande suivante :
 <pre class="brush: shell; gutter: true; first-line: 1; highlight: []; html-script: false">

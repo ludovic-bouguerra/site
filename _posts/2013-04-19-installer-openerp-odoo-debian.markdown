@@ -88,13 +88,14 @@ Il faut à présenter se connecter sur l'interface d'administration.
 http://[AdresseIPdeVotreServeur]:8069
 
 A l'invite suivante :
-<img style="max-width: 500px;" src="http://www.ludovicbouguerra.fr/wp-content/uploads/2013/04/Capture-d’écran-2013-04-19-à-21.33.53.png" alt="Invite mot de passes OpenERP" />
+<img style="max-width: 500px;" src="/images/posts/installer-openerp-sur-debian/login-screen.png" alt="Invite mot de passes OpenERP" />
 
 Entrez l'utilisateur et le mot de passe par défaut d'OpenERP : admin / admin.
 
 A présent il va falloir sélectionner les modules qui vous intéressent.
 
-<img style="max-width: 500px;" src="http://www.ludovicbouguerra.fr/wp-content/uploads/2013/04/Capture-d’écran-2013-04-19-à-21.33.38.png" alt="Sélection des modules OpenERP" />
+<img style="max-width: 500px;" src="/images/posts/installer-openerp-sur-debian/apps-selection.png" alt="Sélection des modules OpenERP" />
+
 
 Création du proxy HTTP :
 [ Prochainement ]

@@ -19,9 +19,9 @@ Ce dont nous aurons besoin pour effectuer ce tutoriel :
 
 -Le mot de passe d'administrateur d'OpenERP - Odoo.
 
-<a href="http://www.ludovicbouguerra.fr/wp-content/uploads/2014/05/OpenERP-ecran-de-connexion.png"><img class="aligncenter wp-image-580 size-large" src="http://www.ludovicbouguerra.fr/wp-content/uploads/2014/05/OpenERP-ecran-de-connexion-1024x574.png" alt="OpenERP écran de connexion" width="1024" height="574" /></a>
+<a href="/images/posts/odoo-openerp-sauvegarder-donnes/OpenERP-ecran-de-connexion.png"><img class="aligncenter wp-image-580 size-large" src="/images/posts/odoo-openerp-sauvegarder-donnes/OpenERP-ecran-de-connexion-1024x574.png" alt="OpenERP écran de connexion" width="1024" height="574" /></a>
 
-Nous allons entrer dans le backoffice de gestion des bases de données d'OpenERP. Pour cela Cliquez sur le lien "Gestion des bases de données". <a href="http://www.ludovicbouguerra.fr/wp-content/uploads/2014/05/backoffice-openerp-odoo.png"><img class="aligncenter wp-image-582 size-large" src="http://www.ludovicbouguerra.fr/wp-content/uploads/2014/05/backoffice-openerp-odoo-1024x438.png" alt="backoffice-openerp-odoo" width="1024" height="438" /></a>
+Nous allons entrer dans le backoffice de gestion des bases de données d'OpenERP. Pour cela Cliquez sur le lien "Gestion des bases de données". <a href="/images/posts/odoo-openerp-sauvegarder-donnes/backoffice-openerp-odoo.png"><img class="aligncenter wp-image-582 size-large" src="/images/posts/odoo-openerp-sauvegarder-donnes/backoffice-openerp-odoo-1024x438.png" alt="backoffice-openerp-odoo" width="1024" height="438" /></a>
 
 Se rendre dans le menu Archiver puis sélectionnez la base de données que vous souhaitez sauvegarder, saisissez le mot de passe administrateur d'OpenERP. Enfin cliquez sur "Archiver". Si tout ce passe bien votre navigateur téléchargera un fichier "dump" contenant l'ensemble des données présentes dans votre base.
 
@@ -29,7 +29,7 @@ Important : Nous vous conseillons de tester de votre sauvegarde et de ne jamai
 <h2>La restauration des données.</h2>
 Nous allons à présent restaurer nos données pour cela, rendez vous dans le menu restaurer, sélectionnez le fichier que vous souhaitez restaurer, donnez un nom à votre base de donnée et saisissez le mot de passe administrateur d'OpenERP.
 
-<a href="http://www.ludovicbouguerra.fr/wp-content/uploads/2014/05/backoffice-openerp-odoo-restaurer.png"><img class="aligncenter size-large wp-image-583" src="http://www.ludovicbouguerra.fr/wp-content/uploads/2014/05/backoffice-openerp-odoo-restaurer-1024x232.png" alt="backoffice-openerp-odoo-restaurer" width="1024" height="232" /></a>
+<a href="/images/posts/odoo-openerp-sauvegarder-donnes/backoffice-openerp-odoo-restaurer.png"><img class="aligncenter size-large wp-image-583" src="/images/posts/odoo-openerp-sauvegarder-donnes/backoffice-openerp-odoo-restaurer-1024x232.png" alt="backoffice-openerp-odoo-restaurer" width="1024" height="232" /></a>
 
 &nbsp;
 <h2>En cas de problèmes</h2>
