@@ -3,6 +3,7 @@ layout: post
 title:  "Créer un VPN avec OpenVPN dans un conteneur OpenVZ"
 date:   2012-11-23 22:45:00 +0200
 categories: openvz proxmox openvpn
+long_description: "Si vous n'avez pas assez d'adresses IP publiques, que vous ne souhaitez pas rendre accessibles l'ensemble de vos machines depuis l'extérieur ..."
 ---
 Si vous n'avez pas assez d'adresses IP publiques, que vous ne souhaitez pas rendre accessibles l'ensemble de vos machines depuis l'extérieur ...
 

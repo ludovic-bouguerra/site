@@ -3,6 +3,7 @@ layout: post
 title:  "Installer OpenERP - Odoo sur Debian"
 date:   2013-04-19 20:32:00 +0200
 categories: openerp odoo debian
+long_description: "OpenERP est un logiciel qui permet de centraliser la gestion de son entreprise (Comptabilité, Ressources Humaines, ...) au sein d'un même outil. Libre et Gratuit il est installable sur n'importe quelle distribution Linux et même sur Mac OSX et Windows."
 ---
 <h1>Qu'est ce qu'OpenERP ?</h1>
 OpenERP est un logiciel qui permet de centraliser la gestion de son entreprise (Comptabilité, Ressources Humaines, ...) au sein d'un même outil. Libre et Gratuit il est installable sur n'importe quelle distribution Linux et même sur Mac OSX et Windows.

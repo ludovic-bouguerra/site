@@ -3,8 +3,9 @@ layout: post
 title:  "SEO Vidéos"
 date:   2012-12-26 09:00:00 +0200
 categories: video seo
+long_description: Rendre visible des vidéos sur internet n'est pas si simple. La problématique de la visibilité des médias sur internet est qu'aucun moteur de recherche n'indexe le contenu des vidéos.
 ---
-Rendre visible des vidéos sur internet n'est pas si simple. La problématique de la visibilité des médias sur internet est qu'aucun moteur de recherche n'indexe le contenu des vidéos. C'est sur quoi je travaille actuellement dans le cadre de mon entreprise Kalyzee Interactive Pictures. Il y a quelques trucs et astuces que l'on peut donner afin de rendre vos vidéos visibles sur internet.
+Rendre visible des vidéos sur internet n'est pas si simple. La problématique de la visibilité des médias sur internet est qu'aucun moteur de recherche n'indexe le contenu des vidéos. C'est sur quoi je travaille actuellement dans le cadre de mon entreprise Kalyzee. Il y a quelques trucs et astuces que l'on peut donner afin de rendre vos vidéos visibles sur internet.
 Dans cet article je vais partir d'exemple qui mettent des vidéos et qui sont très bien référencés, par la suite je donnerai quelques liens et références utiles aux personnes souhaitant indexer leurs contenu vidéos.
 
 <strong>Prérequis</strong> : Dans votre intérêt, pour mieux comprendre cet article vous devez avoir des bases en référencement de sites web classiques (notions de sitemaps notamment).

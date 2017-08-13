@@ -3,6 +3,7 @@ layout: post
 title:  "Extraire une portion de vidéo avec FFmpeg"
 date:   2012-11-17 14:46:00 +0200
 categories: ffmpeg vidéo
+long_description: "Si vous souhaitez extraire une portion de vidéo (ou de son) cela est possible et très simple avec FFmpeg !"
 ---
 Si vous souhaitez extraire une portion de vidéo (ou de son) cela est possible et très simple avec FFmpeg !
 Voici le code :
