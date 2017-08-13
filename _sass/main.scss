@@ -1,0 +1,717 @@
+@import "vendors/skeleton/base";
+@import "vendors/skeleton/skeleton";
+@import "vendors/skeleton/layout";
+@import "vendors/font-awesome/font-awesome";
+@import "_variables.scss";
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
+body, h1, h2, h3, h4,{
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+    font-size: 13pt;
+
+}
+
+
+::-moz-selection { /* Pour firefox */
+    background:#33CC99;
+    color:white;
+}
+::selection { /* Pour les autres */
+    background: #33CC99;
+    color:white;
+}
+
+hr{
+ padding:0;
+ margin:0;
+ border-color: rgb(243,243,243);
+}
+
+.home section{
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+
+.infogerance{
+    background-image:url("../../images/home/maintenance.png");
+    background-position: center center;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+
+
+.competences ul img{
+    float:left;
+    margin-right: 10px;
+}
+
+.competences ul li{
+    line-height: 30px;
+    font-size : 12pt;
+    margin-bottom: 30px;
+    padding-left:30px;
+}
+
+
+
+.background-page-top{
+    /*background-image: url("images/home_font.jpg");*/
+    background-color:#3366cc;
+
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    height: 90px;
+
+}
+.background-page-top-flou{
+    height: 90px;
+}
+
+
+.background-home-top{
+    background-color:#3366cc;
+    height: 510px;
+}
+
+#competences, #references{
+    margin-bottom: 20px;
+
+}
+.top-content{
+    margin-top: 30px;
+}
+
+a.btn{
+    color: white;
+}
+
+
+#prestations p{
+    margin-left: 30px;
+    color: grey;
+    text-align:justify;
+}
+
+#prestations h3{
+    margin-bottom: 5px;
+}
+
+#prestations h3 i{
+    margin-right: 10px;
+    width: 20px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px;
+    background-color: #CC0033;
+    border-radius: 10px;
+    color:white;
+}
+
+.block-1{
+    height : auto;
+    text-align: center;
+    color: white;
+}
+
+.block-1 a{
+    color: white;
+}
+
+
+.block-1 .block-1-image{
+    margin-bottom: 20px;
+}
+
+.block-1-image img{
+    max-width: 100%;
+}
+
+.block-1 pre{
+    text-align: center;
+    font-size: 13pt;
+    margin-bottom: 2px;
+}
+
+.block-1 a{
+    text-decoration: none;
+}
+
+.block-1 h1{
+    color: white;
+    margin: 0;
+    margin-top: 80px;
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+}
+
+
+
+aside h3{
+    margin: 0;
+    text-align: left;
+    font-size: 15pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+aside li{
+    margin-left: 25px;
+}
+
+section h1, section h2{
+    color: black;
+    font-size : 16pt;
+    padding:0;
+    margin:0;
+}
+
+
+
+section h1{
+    font-size: 20pt;
+    margin-bottom: 45px;
+    text-align: center;
+    color: rgba(80,80,80,0.9);
+}
+
+.references .icon{
+    text-align: center;
+    padding: 5px;
+    line-height:80px;
+}
+
+.references .icon img{
+    max-width: 200px;
+}
+
+.references .icon i{
+    font-size: 10em;
+}
+
+.references .blue{
+    color: #21218d;
+}
+
+.grey{
+    background-color: rgb(245,245,245);
+}
+
+.black{
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.black h1{
+    color:white;
+}
+
+.black a{
+    color:white;
+}
+
+.references .orange{
+    color: #cb8300;
+}
+
+.references .green{
+    color: #016001;
+}
+
+.references li{
+    display: inline-block;
+    width: 300px;
+    /*border: 1px solid black;*/
+    padding: 2px;
+
+    background: #fff;
+    /*border: 1px solid #ccc;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);    */
+}
+
+.references h3, .references h4{
+    line-height:1;
+    text-align:center;
+    font-size: 12pt;
+}
+
+.references h4{
+    font-size: 10pt;
+    color: grey;
+}
+
+/**
+*   Header
+*/
+#header{
+    background-color: rgba(51,102,153,0.7);
+    height:90px;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1000;
+
+}
+
+#header .menu{
+    text-align: right;
+}
+
+#header .menu a{
+  font-size:10pt;
+
+}
+
+#header .menu a, h1, h2{
+    color: white;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+}
+
+#header .container{
+
+
+}
+
+#logo{
+    display:inline-block;
+}
+
+#logo img{
+    float:left;
+    margin-top: 13px;
+    margin-right: 10px;
+}
+
+
+
+.text-center{
+    text-align:center;
+}
+
+.more{
+    text-align:center;
+    display: block;
+}
+
+article{
+    margin-bottom : 50px;
+
+}
+
+article h1{
+    color: black;
+    font-size: 15pt;
+    text-align:left;
+    padding:0;
+    margin: 0;
+}
+
+#logo a{
+    text-decoration: none;
+}
+#header h1{
+    font-size:18pt;
+    padding:0;
+    margin:0;
+    margin-top: 5px;
+}
+#header h2{
+    font-size:7pt;
+    line-height:0;
+    margin:0;
+    padding:0;
+}
+
+.entry-title a{
+	text-decoration: none;
+}
+
+.entry-title a:hover{
+	text-decoration: underline;
+}
+
+
+#header ul li{
+    margin-left: 20px;
+    line-height: 80px;
+    display:inline-block;
+
+}
+
+.contact{
+}
+
+/**
+*   Formulaire de contact
+*
+*/
+.fullform input, .fullform textarea{
+    width: 100%;
+    font-size: 13pt;
+    padding:10px;
+}
+
+.fullform textarea{
+    height: 150px;
+}
+
+.contact .controlbar{
+    text-align:right;
+}
+
+
+/**
+* Footer
+*/
+#footer{
+    background-color: black;
+    min-height:80px;
+    color: white;
+}
+
+
+#footer li{
+
+}
+
+#footer h4{
+  color:white;
+  font-weight: 100;
+  font-size: 15pt;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 10px;
+
+}
+
+
+
+.social-footer li{
+  float:left;
+  margin-right: 10px;
+}
+
+#footer a, footer a:visited{
+    color: white;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.social-footer a{
+  color:white;
+  font-size: 17pt;
+}
+
+.social-footer a:hover{
+  color:#3366cc !important;
+}
+
+
+#footer .main{
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+#footer a:hover{
+  color: #33CC99
+}
+
+#footer .container{
+     line-height: 70px;
+}
+
+
+h3{
+	color: black;
+    font-size : 14pt;
+}
+
+ol{
+	list-style-type:none;
+}
+
+ol {
+	margin:0;
+}
+
+
+/**
+* Footer
+*/
+#footer{
+    background-color: black;
+    min-height:80px;
+    color: white;
+}
+
+
+#footer a, footer a:visited{
+    color: white;
+}
+
+#footer .container{
+     line-height: 70px;
+}
+
+
+
+
+/***** 08. RESUME *****/
+
+		#resume h4 {
+			margin-top: 0;
+			}
+
+		h4.light, h5.light {
+			color: #999;
+			margin-right: 10px;
+		}
+
+		h4 span {
+			color: #999;
+			margin-right: 10px;
+			}
+
+		#resume_info {
+			margin: 20px 0 20px 0;
+			overflow: hidden;
+			padding: 0 0 20px 0;
+			}
+
+		#resume_image {
+			margin: 0 20px 0 0;
+			width: 300px;
+			float: left;
+		}
+
+			#resume_image img, 	.competence{
+				background: #fff;
+				/*-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+				-moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+				box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);*/
+				margin: 0 auto;
+				margin-bottom: 10px;
+			}
+
+		#resume_personal {
+			float: left;
+			width: 620px;
+		}
+
+			#resume_personal h3 {
+				margin-top: 0;
+			}
+
+		.resume_entry {
+			margin: 0 0 40px 0;
+			overflow: hidden;
+			width: 620px;
+			float: right;
+		}
+
+		.resume ul{
+			list-style-type: list-item;
+		}
+
+		.resume_title {
+			margin-bottom: 20px;
+			overflow: hidden;
+		}
+
+			.resume_title h4 {
+				margin-top: 4px;
+			}
+
+			.resume_title h5 {
+				margin-top: 8px;
+				border-top: 1px solid #efefef;
+				border-bottom: 1px solid #efefef;
+				background: #fff;
+				padding: 4px 8px;
+			}
+
+			.resume_title_left { width: 370px; overflow: hidden; float: left; margin-top: 4px; }
+			.resume_title_right { width: 250px; overflow: hidden; float: right; }
+
+		#employment {
+			float: left;
+			margin-bottom: 40px;
+		}
+
+		#education {
+			float: left;
+		}
+
+		h3.resume {
+			margin: 0 20px 0 0;
+			padding: 0 0 0 40px;
+			height: 32px;
+			width: 260px;
+			float: left;
+		}
+
+			h3.resume.ed {
+				background: url(images/icons/books.png) no-repeat 0 0;
+			}
+
+			h3.resume.em {
+				background: url(images/icons/building.png) no-repeat 0 0;
+			}
+
+.competence:hover{
+/*	background-color:#F8FBFF;
+	border-color:#343838;*/
+}
+
+.competence h1{
+	font-size:12pt;
+	text-align:center;
+
+
+}
+
+.post img{
+   max-width : 640px;
+
+}
+
+.competence img{
+   max-height:150px;
+}
+.competence{
+	text-align:center;
+}
+
+.wpcf7-captchac{
+    display: inline-block !important;
+    margin-top: 10px;
+
+}
+
+.wpcf7-captchar{
+    display:inline-block !important;
+    width: 100px !important;
+}
+
+
+.wpcf7-submit{
+    width : 200px !important;
+    margin-left:50px;
+}
+
+.btn-black, .wpcf7-submit{
+    text-decoration: none;
+    font-weight: normal !important;
+    background-color : #363639 !important;
+    color : white !important;
+    border : 0px !important;
+}
+
+.contact .controls{
+    text-align: center;
+}
+
+ /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 959px) {}
+
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+	#header .menu li{
+		margin-left: 15px;
+	}
+  }
+
+  /* All Mobile Sizes (devices and browser) */
+  @media only screen and (max-width: 767px) {
+        #header{
+            height: 135px;
+        }
+        .background-page-top{
+            height: 120px;
+        }
+        .background-page-top-flou{
+            height: 120px;
+        }
+
+        #logo{
+            text-align: center;
+        }
+
+        #header .menu {
+            text-align: center;
+        }
+        #header .menu li{
+            display: inline-block;
+            margin: 4px;
+            float:none;
+	    font-size: 10pt;
+        }
+        .background-home-top{
+           height: 600px;
+        }
+
+        .block-1 h1{
+            margin-top : 120px;;
+        }
+
+        .block-1{
+            padding:0;
+            margin:0;
+            height: 150px;
+        }
+
+        #prestations-illustration{
+            display: none;
+        }
+  }
+
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 479px) {
+        #header{
+            height: 290px;
+        }
+
+        .background-page-top{
+            height: 290px;
+            background: none;
+        }
+        .background-page-top-flou{
+            height: 290px;
+        }
+
+
+        .background-home-top{
+           height: 760px;
+        }
+
+        .block-1 h1 {
+            margin-top: 300px;
+            line-height: 22px;
+            font-size: 12pt;
+            margin-bottom: 10px;
+        }
+        #header .menu {
+            margin-top: 40px;
+        }
+        #header .menu li{
+            display: block;
+            line-height: 30px;
+            margin: 4px;
+            float:none;
+        }
+
+
+  }
