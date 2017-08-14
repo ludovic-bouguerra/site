@@ -15,15 +15,15 @@
 # in the templates via {{ site.myvariable }}.
 title: Ludovic Bouguerra
 email: bouguerra.ludovic@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+phone: +33 6 81 93 15 60
+description: Développeur freelance PHP Symfony 2 - Java
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ludovic-bouguerra.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: LBouguerra
 github_username:  ludovic-bouguerra
 linkedin: http://fr.linkedin.com/pub/ludovic-bouguerra/34/5a/214/
+gplus_username: LudovicBouguerra
+skype_username: ludovic.bouguerra
 main_categories:
   - Architecture logicielle
   - Développement
@@ -48,3 +48,5 @@ exclude:
   - Gemfile.lock
 sass:
     sass_dir: _sass
+plugins:
+  - jekyll-redirect-from    

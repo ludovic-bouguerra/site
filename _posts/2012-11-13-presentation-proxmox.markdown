@@ -4,6 +4,8 @@ title:  "Présentation de Proxmox"
 date:   2012-11-13 21:25:00 +0200
 categories: virtualisation proxmox
 long_description: "Proxmox est une distribution Linux basée sur Debian. C'est un serveur de virtualisation open source et gratuit. Il est d'utilisation et propose une administration depuis une interface Web, via une API ou plus classiquement en mode console."
+redirect_from: ""
+
 ---
 Proxmox est une distribution Linux basée sur Debian. C'est un serveur de virtualisation open source et gratuit. Il est d'utilisation et propose une administration depuis une interface Web, via une API ou plus classiquement en mode console.
 

@@ -4,6 +4,8 @@ title:  "Installer votre Site Django sur un serveur mutualisé 1and1"
 date:   2014-10-15 11:01:00 +0200
 categories: django 1and1
 long_description: Aujourd’hui les offres d’hébergement mutualisées ne sont plus uniquement compatibles avec PHP. Il est possible d’héberger des sites en Python, Ruby, Perl. Toutefois cela n’est pas sans limitations mais nous allons voir qu’il est assez simple d’installer un site développé en Python avec Django sous 1and1.
+redirect_from: "/2014/10/installer-site-django-serveur-mutualise-1and1/l"
+
 
 ---
 Aujourd'hui les offres d'hébergement mutualisées ne sont plus uniquement compatibles avec PHP. Il est possible d'héberger des sites en Python, Ruby, Perl. Toutefois cela n'est pas sans limitations mais nous allons voir qu'il est assez simple d'installer un site développé en Python avec Django sous 1and1.

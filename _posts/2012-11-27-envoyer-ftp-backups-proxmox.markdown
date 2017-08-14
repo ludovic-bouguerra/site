@@ -4,6 +4,8 @@ title:  "Envoyer par FTP les backups réalisés par Proxmox"
 date:   2012-11-27 21:44:00 +0200
 categories: ftp update
 long_description: "Voici un script qui pourrait vous être très utile et qui vous permettra d'envoyer sur un serveur ftp (dans mon cas les serveurs ftp backups d'OVH) les sauvegardes automatiques des machines virtuelles faites par Proxmox."
+redirect_from: ""
+
 ---
 Voici un script qui pourrait vous être très utile et qui vous permettra d'envoyer sur un serveur ftp (dans mon cas les serveurs ftp backups d'OVH) les sauvegardes automatiques des machines virtuelles faites par Proxmox.
 

@@ -4,6 +4,7 @@ title:  "Installer PHP et Mysql sur Mac OS X"
 date:   2013-02-03 20:42:0 +0200
 categories: macosX php mysql
 long_description: "Par défaut MAC OS X est livré avec Apache et PHP mais il ne sont pas configurés. Dans ce tutoriel nous allons paramétrer notre environnement afin de pouvoir développer et tester nos site depuis un MAC."
+redirect_from: "/2013/02/installer-php-et-mysql-sur-mac-os-x/"
 
 ---
 Par défaut MAC OS X est livré avec Apache et PHP mais il ne sont pas configurés. Dans ce tutoriel nous allons paramétrer notre environnement afin de pouvoir développer et tester nos site depuis un MAC.

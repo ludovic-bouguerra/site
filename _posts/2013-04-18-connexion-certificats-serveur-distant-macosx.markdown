@@ -4,6 +4,8 @@ title:  "Se connecter à l'aide de certificats sur un serveur distant depuis Mac
 date:   2013-04-18 21:36:00 +0200
 categories: macosX administration serveur
 long_description: "La connexion à l'aide de certificats sur un serveur distant permet de sécuriser votre serveur SSH. (A condition que vous ayez empêché la connexion par login / mot de passe)."
+redirect_from: "/2013/04/se-connecter-a-laide-de-certificats-sur-un-serveur-distant-depuis-mac-os-x/"
+
 ---
 La connexion à l'aide de certificats sur un serveur distant permet de sécuriser votre serveur SSH. (A condition que vous ayez empêché la connexion par login / mot de passe).
 

@@ -4,6 +4,8 @@ title:  "Odoo - OpenERP : Personnalisez vos fiches clients"
 date:   2014-05-24 17:01:00 +0200
 categories: openerp odoo
 long_description: "La fiche client d'OpenERP peut s'avérer insuffisante si vous avez besoin de stocker des informations particulières sur vos clients. Typiquement si vous souhaitez enregistrer le Siret des entreprises vous pouvez l'enregistrer dans les notes internes. Néanmoins vous ne pourrez pas faire de recherche et puis les données seront moins structurées."
+redirect_from: "/2014/05/odoo-openerp-personnalisez-vos-fiches-clients/"
+
 ---
 La fiche client d'OpenERP peut s'avérer insuffisante si vous avez besoin de stocker des informations particulières sur vos clients. Typiquement si vous souhaitez enregistrer le Siret des entreprises vous pouvez l'enregistrer dans les notes internes. Néanmoins vous ne pourrez pas faire de recherche et puis les données seront moins structurées.
 

@@ -4,6 +4,8 @@ title:  "Créer un repository de Bundles privés avec Satis"
 date:   2013-04-29 21:25:00 +0200
 categories: développement
 long_description: Satis est une application Symfony qui fera le liens entre le noms de vos Bundles symfony, leurs versions et leurs dépots pour les télécharger.
+redirect_from: "/2013/04/creer-un-repository-de-bundle-prives-avec-satis/"
+
 ---
 Prérequis :
 <ul>

@@ -4,6 +4,8 @@ title:  "Odoo - OpenERP : Sauvegarder vos données"
 date:   2014-05-24 18:56:00 +0200
 categories: openerp odoo
 long_description: "OpenERP permet de réaliser simplement la sauvegarde de vos données pour pouvoir : les restaurer en cas de problèmes, les utiliser sur une version de pré-production pour tester une modification."
+redirect_from: "/2014/05/odoo-openerp-sauvegarder-vos-donnees/"
+
 ---
 OpenERP permet de réaliser simplement la sauvegarde de vos données pour pouvoir :
 
