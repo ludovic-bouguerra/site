@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Extraire une portion de vidéo avec FFmpeg"
-date:   2012-11-17 14:46:00 +0200
+title:  "Intégrez Redmine dans Eclipse afin d’assurer le suivi de vos tâches"
+date:   2013-09-01 14:46:00 +0200
 categories: redmine taches
 long_description: "Redmine propose des outils intéressants pour la gestion de projet informatique. Néanmoins remplir les tâches effectuées au quotidien depuis l’interface Web s’avère fastidieux. Il est possible d’intégrer le suivi des taches Redmine au sein d’Eclipse (Et même Netbeans)."
 redirect_from: "/2013/09/integrez-redmine-dans-eclipse-afin-dassurer-le-suivi-vos-taches/"
