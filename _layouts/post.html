@@ -1,7 +1,7 @@
 ---
-layout: sidebar
+layout: default
 ---
-
+<div class="ten column">
 <article id="post-page">
 	<h2>{%if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h2>
 	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
@@ -11,3 +11,4 @@ layout: sidebar
 
 	</div>
 </article>
+</div>

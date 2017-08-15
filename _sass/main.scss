@@ -303,6 +303,7 @@ section h1{
 .more{
     text-align:center;
     display: block;
+    margin-top: 20px;
 }
 
 article{
@@ -310,9 +311,10 @@ article{
 
 }
 
-article h1{
+article h2{
     color: black;
-    font-size: 15pt;
+    font-size: 20pt;
+    font-weight: bold;
     text-align:left;
     padding:0;
     margin: 0;
@@ -350,6 +352,16 @@ article h1{
 
 }
 
+h2.title a{
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h2.title a:hover{
+  color: $senary-color;
+}
+
 .contact{
 }
 
@@ -380,7 +392,7 @@ article h1{
     min-height:80px;
     color: white;
     font-size: 11pt;
-    
+
 }
 
 
