@@ -74,10 +74,6 @@ hr{
 }
 
 
-.background-home-top{
-    background-color:#3366cc;
-    height: 510px;
-}
 
 #competences, #references{
     margin-bottom: 20px;
@@ -253,14 +249,8 @@ section h1{
 *   Header
 */
 #header{
-    background-color: rgba(51,102,153,0.7);
-    height:90px;
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    z-index: 1000;
-
+    background-color:#3366cc;
+    height: 400px;
 }
 
 #header .menu{
@@ -281,20 +271,15 @@ section h1{
 
 #header .container{
 
-
-}
-
-#logo{
-    display:inline-block;
-}
-
-#logo img{
-    float:left;
-    margin-top: 13px;
-    margin-right: 10px;
 }
 
 
+#header .profile{
+  float: left;
+  border-radius: 500px;
+  height: 200px;
+  margin-right: 50px;
+}
 
 .text-center{
     text-align:center;
@@ -324,14 +309,14 @@ article h2{
     text-decoration: none;
 }
 #header h1{
-    font-size:18pt;
+    font-size:30pt;
     padding:0;
     margin:0;
-    margin-top: 5px;
+    margin-top: 40px;
+
 }
 #header h2{
-    font-size:7pt;
-    line-height:0;
+    font-size:20pt;
     margin:0;
     padding:0;
 }
