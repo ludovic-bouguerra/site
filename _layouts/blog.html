@@ -13,7 +13,7 @@ layout: default
 		{{ post.long_description }}
     </div><!--/.article-content-->
 
-		<a href="/{{ post.url }}/" class="full-post-link more">Lire l'article complet
+		<a href="{{ site.url }}{{ post.url }}" class="full-post-link more">Lire l'article complet
 </a>
 	</article>
 	{% if forloop.last %}{% else %}<div class="separater"></div>{% endif %}
