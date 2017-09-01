@@ -643,17 +643,22 @@ ol {
   /* All Mobile Sizes (devices and browser) */
   @media only screen and (max-width: 767px) {
         #header{
-            height: 135px;
+            height: 350px;
         }
-        .background-page-top{
-            height: 120px;
-        }
-        .background-page-top-flou{
-            height: 120px;
+        #header h1{
+          margin-top: 10px;
+          font-size: 20pt;
         }
 
-        #logo{
-            text-align: center;
+        #header h2{
+          font-size: 10pt;
+          margin:0;
+          padding: 0;
+          line-height: 20px;
+        }
+
+        #header .profile{
+            height: 150px;
         }
 
         #header .menu {
@@ -663,11 +668,9 @@ ol {
             display: inline-block;
             margin: 4px;
             float:none;
-	    font-size: 10pt;
+	          font-size: 10pt;
         }
-        .background-home-top{
-           height: 600px;
-        }
+
 
         .block-1 h1{
             margin-top : 120px;;
@@ -690,20 +693,22 @@ ol {
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
   @media only screen and (max-width: 479px) {
         #header{
-            height: 290px;
+            height: 250px;
         }
 
-        .background-page-top{
-            height: 290px;
-            background: none;
+        #header .profile{
+            height: 100px;
         }
-        .background-page-top-flou{
-            height: 290px;
+        #header h1{
+          margin-top: 5px;
+          font-size: 10pt;
         }
 
-
-        .background-home-top{
-           height: 760px;
+        #header h2{
+          font-size: 7pt;
+          margin:0;
+          padding: 0;
+          line-height: 10px;
         }
 
         .block-1 h1 {
@@ -716,7 +721,7 @@ ol {
             margin-top: 40px;
         }
         #header .menu li{
-            display: block;
+            display: line-height;
             line-height: 30px;
             margin: 4px;
             float:none;
