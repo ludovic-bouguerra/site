@@ -18,7 +18,7 @@ email: bouguerra.ludovic@gmail.com
 phone: +33 6 81 93 15 60
 description: Développeur informatique #Web #Video #Embarqué #Architecture #Docker #Odoo Spécialiste en architecture des applications.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.ludovicbouguerra.fr" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.ludovicbouguerra.fr" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: LBouguerra
 github_username:  ludovic-bouguerra
 linkedin: http://fr.linkedin.com/pub/ludovic-bouguerra/34/5a/214/
