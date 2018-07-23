@@ -2,3 +2,34 @@
 ---
 
 @import "main.scss";
+
+#header i{
+  color:white;
+}
+
+
+#prestations .embedded h3{
+  margin-top: 15px;
+}
+
+#prestations .infrastructure h3{
+  margin-top: 16px;
+}
+
+
+#prestations .icon{
+  text-align: center;
+}
+
+#prestations h3 {
+  margin-top: 10px;
+  font-size: 13pt;
+  text-align: center;
+
+}
+
+#prestations li{
+  font-size: 11pt;
+  line-height: 14px;
+  text-align: center;
+}
