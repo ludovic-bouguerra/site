@@ -73,7 +73,31 @@ hr{
     height: 90px;
 }
 
+.pricing {
+  text-align: center;
+}
 
+.pricing h3 {
+}
+
+.pricing ul{
+  border-top: 1px solid $tertiary-color;
+
+}
+
+.pricing ul li{
+  border: 1px solid $tertiary-color;
+  border-top: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.pricing .amount{
+  background-color: $senary-color;
+  color: white;
+  font-weight: 400;
+  font-size: 15pt;
+}
 
 #competences, #references{
     margin-bottom: 20px;
