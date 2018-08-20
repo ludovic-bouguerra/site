@@ -4,7 +4,7 @@ title:  "Intégration Continue et Déploiement continu avec Django - Docker - Tr
 date:   2017-08-14 11:01:00 +0200
 categories: django 1and1
 long_description: Travis CI est une plateforme permettant de faire de l'intégration continue. Deux versions du service sont disponibles une gratuite pour les projets OpenSource (travis-ci.org), une autre payante pour les projets privés (travis-ci.com). Nous allons au cours de ce tutoriel mettre en place un service en python qui répondra juste Hello World lorsque nous l'interrogerons au point d'entrée /hello.
-
+thumbnail: /images/posts/integration-continue-deploiement-continu-django-docker-travis-p1/thumbnail.jpeg
 
 ---
 
