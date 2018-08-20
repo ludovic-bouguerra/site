@@ -8,6 +8,37 @@
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 
+
+article img {
+  max-width: 100%;
+}
+
+article .thumbnail h2.title{
+  z-index: 100;
+
+}
+
+.list article {
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.list article img {
+  width: 100%;
+}
+
+
+.list article h2.title{
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  font-size: 13pt;
+
+}
+
+.list article .date{
+  margin-top: 10px;
+}
+
 body, h1, h2, h3, h4,{
     font-family: 'Lato', sans-serif;
     font-weight:300;
