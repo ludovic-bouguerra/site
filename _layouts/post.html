@@ -4,6 +4,9 @@ layout: default
 <div class="mx-auto thirteen columns">
 <article id="post-page">
 	<h2>{%if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h2>
+	{% if page.thumbnail %}
+		<img src="{{page.thumbnail}}" />
+	{% endif %}
 	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
 	<div class="content">
 
