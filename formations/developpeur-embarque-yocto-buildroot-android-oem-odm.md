@@ -1,3 +1,9 @@
+---
+layout: formation
+title: Formation développeur embarqué
+permalink: /formations/developpeur-embarque-yocto-buildroot-android-oem-odm.html
+
+---
 # Formation développeur embarqué
 
 ## A qui la formation s'adresse

@@ -358,10 +358,16 @@ if [ -z $1 ]; then
 fi
 
 if [ "$COMMAND" = "uwsgi" ]; then
-	COMMAND="/usr/local/bin/uwsgi -s https://www.linkedin.com/redir/invalid-link-page?url=0%2e0%2e0%2e0%3A8000 --module=example.wsgi:application"
+	COMMAND="/usr/local/bin/uwsgi -s 0.0.0.0:8000 --module=example.wsgi:application"
 fi
 
 eval $COMMAND
+```
+
+Pensez à bien mettre les droits en execution au script :
+
+```
+chmod
 ```
 
 Enfin nous allons modifier notre Dockerfile pour prendre en compte l'EntryPoint

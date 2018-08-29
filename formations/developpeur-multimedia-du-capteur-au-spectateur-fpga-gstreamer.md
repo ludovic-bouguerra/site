@@ -1,4 +1,13 @@
-# Formation du capteur au spectateur
+---
+layout: formation
+title: Formation développeur multimédia - du capteur au spectateur
+permalink: /formations/developpeur-multimedia-du-capteur-au-spectateur-fpga-gstreamer.html
+
+---
+
+# Formation développeur multimédia, du capteur au spectateur
+
+
 
 ## A qui la formation s'adresse
 
