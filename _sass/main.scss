@@ -732,3 +732,28 @@ code{
   border-radius: 3px;
   display: block;
 }
+
+.formation .item p{
+  text-align: justify;
+}
+
+.header-subtitle h1{
+  margin-bottom: 0;
+}
+
+.header-subtitle h2{
+  font-size: 15pt;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.formation.technologies{
+  height: 200px;
+}
+.formation.technologies{
+  text-align: center;
+}
+.formation.technologies img{
+  max-width: 220px;
+}
