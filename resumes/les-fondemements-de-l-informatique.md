@@ -25,33 +25,9 @@ Il est possible de faire des opérations de bases sur chacune de ces adresses en
 Ces **opérations de bases** sont utilisables à travers un langage de programmation : **l'assembleur**.
 
 
----
-Cycle traitement --> Figure 3.6 Page 59
-
-OR XOR ...
-
-
-RISC CISC page 72
-
-Registres fonctions page 82
-
-
-Les structures de données
-
-Arithmétiques
-
-Couple -> Adresse / Valeur
-
-
-Différents types de mémoire 101 -> Vitesses - Types - Conservation
-
-Page 133 Lien avec E/S -- Figure 3.24 Entrées Sorties
-
----
-
 ### Périphériques entrées / sorties
 
-Les périphériques d'entrées sorties peuvent être assimilés aux divers sens du corps humains. Il s'agit de données que le processeur va recevoir de différentes sources qui vont lui permettre ensuite d'effectuer des traitements et transmettre des données. Toutefois là ou le corps dispose que les nerfs afin de transmettre et recevoir les informations qui sont transmisses au cerveau. L'ordinateur possède quant à lui une variété de **bus de données** qui ont le rôle de transmettre les données. La question qui peut finalement se poser: c'est pourquoi finalement différents bus de données alors que nous transmettons qu'un signal électrique. En fait un bus de données est caractérisé principalement par sa **vitesse** et **le sens** dans lequel la communication peut se faire. Par exemple certains permettent la communication en simultanée dans les deux sens, d'autres dans un sens.
+Les périphériques d'entrées sorties peuvent être assimilés aux divers sens du corps humains. Il s'agit de données que le processeur va recevoir de différentes sources qui vont lui permettre ensuite d'effectuer des traitements et transmettre des données. Toutefois là ou le corps dispose que les nerfs afin de transmettre et recevoir les informations qui sont transmisses au cerveau. L'ordinateur possède quant à lui une variété de **bus de données** qui ont le rôle de transmettre les données. La question qui peut finalement se poser: Pourquoi finalement différents bus de données alors que nous transmettons qu'un signal électrique. En fait un bus de données est caractérisé principalement par sa **vitesse** et **le sens** dans lequel la communication peut se faire. Par exemple certains permettent la communication en simultanée dans les deux sens, d'autres dans un sens.
 
 L'auteur présente le fonctionnement des périphériques suivants :
 - Ecrans
@@ -60,64 +36,18 @@ L'auteur présente le fonctionnement des périphériques suivants :
 
 L'auteur nous explique la différence entre un **contrôleur**, un **bus** et un **port** ce qui constitue les éléments essentiels de la communications entre les périphériques et le processeur. Nous apprenons aussi comment chaque périphériques peuvent attirer l'attention du processeur afin d'exécuter une tâche précise. Ce sont les **IRQ** pour interrupt request, c'est un mécanisme qui permet aux périphériques d'annoncer qu'un événement important nécessitant de lancer une opération immédiate vient de se produire. Il peut s'agir par exemple de la pression d'une touche du clavier.
 
-Enfin le mode DMA nous est présenté, c'est un mode de transfert de données utilisé lorsque la quantité de donné est importante. L'objectif est de réduire les actions du processeur. Les périphériques peuvent directement écrire sur une plage d'adresse mémoire et dès que l'opération est terminée il est possible de prévenir le processeur par l'intermédiaire d'une IRQ.
+Enfin le mode **DMA** nous est présenté, c'est un mode de transfert de données utilisé lorsque la quantité de donné est importante. L'objectif est de réduire les actions du processeur. Les périphériques peuvent directement écrire sur une plage d'adresse mémoire et dès que l'opération est terminée il est possible de prévenir le processeur par l'intermédiaire d'une IRQ.
 
-
-### Les réseaux
-
-Trasmission des données physique A/N
-
-Mode de transmission 218
-Différents types de réseaux
-
-Filaire : ADSL /
-Radio   :  3G / WIFI
-
-Topologie des réseaux
-
-Modèle OSI 5.17 243
-
-Classes d'adresses IP
-
-Différents protocoles applicatifs
 
 ### Les systèmes d'exploitations
 
-Nous verrons le rôles / architectures des différents systèmes d'exploitations.
+L'auteur présente les différentes familles de systèmes d'exploitation partant du BIOS, Windows, Linux, Unix, Mac OS et une partie est réservée aux systèmes d'exploitations mobiles.
 
-NOYAU / Applications périphériques
-Gestions
-Figure 6.1
+Ce chapitre présente également le rôle des systèmes d'exploitations ainsi que les différentes architectures possibles. En résumé son rôle est de permettre de faire le lien entre le matériel et les applications des utilisateurs.
 
-Familles OS : 265
-
-Threads / Processus
-278 / 279
-
-Tps processeurs / Processus
-
-Gestion de la mémoire
-
-File Management : Système de fichiers
-
-Interface utilisateur
-
-### Les applications d'entreprise
-
-Programmation et application en entreprise
-API fournies par l'OS
-
-Structures conditionnelles / Variables
-
-Fonction
-
-Boucles
-
-POO
-
-BDD
-
-### Pour aller plus loins
-Lire un datasheet processeur
-
-Formation développement embarqué
+Il assure :
+* La gestion des processus
+* La gestion de la mémoire
+* La gestion des fichiers
+* La gestion des entrées sorties
+* La gestion des réseaux
