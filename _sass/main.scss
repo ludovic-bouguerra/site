@@ -66,6 +66,14 @@ body, h1, h2, h3, h4,{
 }
 
 
+.content{
+  margin-top: 20px;
+}
+
+.content p{
+  text-align: justify;
+}
+
 ::-moz-selection { /* Pour firefox */
     background:#33CC99;
     color:white;
