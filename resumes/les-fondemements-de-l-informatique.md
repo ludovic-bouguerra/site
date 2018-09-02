@@ -30,7 +30,7 @@ Ces **opérations de bases** sont utilisables à travers un langage de programma
 Les périphériques d'entrées sorties peuvent être assimilés aux divers sens du corps humains. Il s'agit de données que le processeur va recevoir de différentes sources qui vont lui permettre ensuite d'effectuer des traitements et transmettre des données. Toutefois là ou le corps dispose que les nerfs afin de transmettre et recevoir les informations qui sont transmisses au cerveau. L'ordinateur possède quant à lui une variété de **bus de données** qui ont le rôle de transmettre les données. La question qui peut finalement se poser: Pourquoi finalement différents bus de données alors que nous transmettons qu'un signal électrique. En fait un bus de données est caractérisé principalement par sa **vitesse** et **le sens** dans lequel la communication peut se faire. Par exemple certains permettent la communication en simultanée dans les deux sens, d'autres dans un sens.
 
 L'auteur présente le fonctionnement des périphériques suivants :
-- Ecrans
+- Écrans
 - Claviers
 - souris
 
@@ -38,16 +38,36 @@ L'auteur nous explique la différence entre un **contrôleur**, un **bus** et un
 
 Enfin le mode **DMA** nous est présenté, c'est un mode de transfert de données utilisé lorsque la quantité de donné est importante. L'objectif est de réduire les actions du processeur. Les périphériques peuvent directement écrire sur une plage d'adresse mémoire et dès que l'opération est terminée il est possible de prévenir le processeur par l'intermédiaire d'une IRQ.
 
-
 ### Les systèmes d'exploitations
 
-L'auteur présente les différentes familles de systèmes d'exploitation partant du BIOS, Windows, Linux, Unix, Mac OS et une partie est réservée aux systèmes d'exploitations mobiles.
+L'auteur présente les différentes familles de systèmes d'exploitation partant du BIOS, Windows, Linux, Unix, Mac OS suivie d'une partie réservée aux systèmes d'exploitations mobiles.
 
 Ce chapitre présente également le rôle des systèmes d'exploitations ainsi que les différentes architectures possibles. En résumé son rôle est de permettre de faire le lien entre le matériel et les applications des utilisateurs.
 
 Il assure :
-* La gestion des processus
-* La gestion de la mémoire
-* La gestion des fichiers
-* La gestion des entrées sorties
-* La gestion des réseaux
+* **La gestion des processus**
+* **La gestion de la mémoire**
+* **La gestion des fichiers**
+* **La gestion des entrées sorties**
+* **La gestion des réseaux**
+
+Il permet d'**isoler** les différents programmes des utilisateurs, de permettre (en fonction des cas) d'en lancer plusieurs en même temps. Il leur réserve un **espace de mémoire** et leur offre des API pour pouvoir manipuler les entrées sorties par exemple :
+* créer ou lire des fichiers
+* communiquer en réseau
+* communiquer avec l'utilisateur via des interfaces graphiques / sons ...
+
+L'auteur présente spécifiquement comment fonctionnent sont gérés la mémoire, les processus, les systèmes de fichiers.
+
+### Développement d'application
+
+J'ai regroupés deux chapitres dans cette partie. L'auteur présente les bases des **langages de programmation**, des **bases de données**.
+
+En ce qui concerne les langages de programmation on n'y apprend ce qu'est une **variable**, les **structures conditionnelles**, les **boucles** et les bases de la **programmation objet**. Un développeur ayant déjà développé n'apprendra pas grand chose dans cette partie.
+
+Ensuite l'auteur traite également des bases de données, nous apprenons comment interroger une base de donnée, et comment **modéliser des schémas de bases de données**.
+
+### L'utilité et les application en entreprise
+
+Enfin l'auteur termine avec une partie qui présente les architectures présentes dans les entreprises on y découvre comment créer des application qui peuvent communiquer entre eux avec la mise en place où l'utilisation d'API **REST**, **SOAP**.
+
+Une présentation générale est faite des outils de gestion que l'on peut trouver dans les entreprises (**ERP**, **CRM**, ...). Enfin dans les dernières pages l'auteur parle des outils de reporting.
