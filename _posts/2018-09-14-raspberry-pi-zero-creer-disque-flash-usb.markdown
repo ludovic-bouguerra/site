@@ -65,12 +65,25 @@ Il faut à présent monter le disque :
 ```
 sudo kpartx -a disk
 
+```
+
+Nous formattons la partition puis nous la montons.
+
+```
 mkfs.ext4 /dev/mapper/loop0p1
 
 sudo mount /dev/mapper/loop0p1 /mnt/disk
+```
 
+On ajoute un fichier
+
+```
 sudo touch /mnt/disk/test.txt
+```
 
+Enfin nous retirons le disque.
+
+```
 sudo umount /dev/mapper/loop0p1
 
 sudo losetup -d /dev/loop0
