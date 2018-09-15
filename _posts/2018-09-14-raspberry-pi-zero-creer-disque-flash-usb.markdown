@@ -95,6 +95,4 @@ sudo losetup -d /dev/loop0
 modprobe g_mass_storage file=/data/disk
 ```
 
-Branchez à présent le périphérique USB sur votre Raspberry pi, elle sera reconnu comme une clé USB.  
-
-La prochaine fois je vous présenterai comment faire une webcam USB.
+Branchez à présent le périphérique USB sur votre Raspberry pi, elle sera reconnue comme une clé USB.  
