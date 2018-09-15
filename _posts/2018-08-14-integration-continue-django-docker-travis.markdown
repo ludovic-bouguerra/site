@@ -129,7 +129,7 @@ docker-compose run app ./manage.py test
 
 Et comme par miracle ;) cette commande nous retourne :
 
-```
+{% highlight shell %}
 Creating test database for alias 'default'...
 System check identified no issues (0 silenced).
 
@@ -138,7 +138,8 @@ Ran 0 tests in 0.000s
 
 OK
 Destroying test database for alias 'default'...
-```
+{% endhighlight %}
+
 
 Il faut avouer que nous avons pas encore fait grand chose ( 0 tests effectués ), toutefois nous allons pouvoir dès à présent integrer Travis dans notre Workflow.
 
@@ -160,24 +161,25 @@ Nous allons devoir enregistrer notre nouveau projet Git sur Travis. Cliquez sur 
 
 Pour fonctionner Travis à besoin d'un fichier qui doit être placé à la racine du projet qui se nomme .travis.yml.
 
-```
+{% highlight yml %}
 sudo: required
 language: python
 services:
   - docker
 script:
   -  docker-compose run app ./manage.py test
-```
+{% endhighlight %}
 
 Ce fichier indique à Travis qu'il s'agit d'un projet Python, que nous allons avoir besoin de docker.
 
 Ajoutons ce fichier dans notre système de gestion version, et publions nos modifications sur notre serveur central.
 
-```
+{% highlight shell %}
 git add .travis.yml
 git commit -m "Travis integration"
 git push origin master
-```
+{% endhighlight %}
+
 
 Rendons nous à présent sur le tableau de bord de Travis, au bout de quelques minutes vous devriez voir un indicateur vert nous indiquant que le processus de test s'est bien passé. Grâce à Travis-ci vous allez pouvoir exécuter certaines commande lorsque les tests se sont bien passés comme par exemple : mettre à jour votre application sur votre serveur, créer un release sur Github, ...
 
@@ -190,15 +192,16 @@ Afficher "Hello World" lorsque le client fait une requête.
 Nous créerons dans un premier temps le tests puis ensuite nous ferons le développement de la fonction.
 Cette partie ne sera pas commentée car la connaissance de Django est un prérequis.
 
-```
+{% highlight shell %}
 docker-compose run app ./manage.py startapp webservice
-```
+{% endhighlight %}
+
 
 Nous créons une application que nous appellerons webservice
 
 Dans le fichier webservice/tests.py écrivons notre premier test :
 
-```
+{% highlight python %}
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
@@ -211,13 +214,13 @@ class HelloTest(TestCase):
         response = c.get('/hello')
         self.assertEquals("hello world", response.content)
 
-```
+{% endhighlight %}
 
 Testons le lancement du test qui devrait évidemment échouer ;).
 
 Django nous réponds effectivement :
 
-```
+{% highlight shell %}
 ======================================================================
 FAIL: test_hello_world (webservice.tests.HelloTest)
 ----------------------------------------------------------------------
@@ -232,15 +235,15 @@ Ran 1 test in 0.010s
 
 FAILED (failures=1)
 Destroying test database for alias 'default'...
-```
+{% endhighlight %}
 
 Publions volontairement ce test qui est en échec sur Github et étudions la réaction sur Travis.
 
-```
+{% highlight shell %}
 git add webservice
 git commit -m "Publish fail test"
 ﻿git push origin master
-```
+{% endhighlight %}
 
 Comme prévu sur notre tableau de bord Travis le test est marqué en échec.
 
@@ -252,7 +255,7 @@ Dans le fichier example/urls.py
 
 Remplacez le contenu par celui-ci :
 
-```
+{% highlight python %}
 """example URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -275,10 +278,12 @@ from webservice.views import hello_world_view
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello$', hello_world_view, name='hello_world')
-```
+
+{% endhighlight %}
+
 et dans fichier webservice/views remplacez également le contenu :
 
-```
+{% highlight python %}
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
@@ -289,17 +294,19 @@ from django.http import HttpResponse
 def hello_world_view(request):
     return HttpResponse("hello world", content_type="text/plain")
 
-```
+{% endhighlight %}
+
 
 Lançons les tests pour valider le fonctionnement :
 
-```
+{% highlight shell %}
 docker-compose run app ./manage.py test
-```
+{% endhighlight %}
 
 On constate effectivement que les tests se passent bien :
 
-```
+{% highlight shell %}
+
 Creating test database for alias 'default'...
 System check identified no issues (0 silenced).
 .
@@ -307,13 +314,15 @@ System check identified no issues (0 silenced).
 Ran 1 test in 0.006s
 
 OK
-```
+
+{% endhighlight %}
 
 Nous pouvons aussi lancer l'application et observer le bon fonctionnement depuis notre navigateur :
 
-```
+{% highlight shell %}
 docker-compose up
-```
+{% endhighlight %}
+
 
 Rendez-vous à l'url suivante :
 
@@ -325,11 +334,12 @@ On constate bien que l'application retourne hello world.
 
 Nous pouvons donc publier notre code et voir la réaction du côté de Travis.
 
-```
+{% highlight shell %}
 git add example/urls.py webservice/views.py
 git commit -m "Adding /hello endpoint"
 git push origin master
-```
+{% endhighlight %}
+
 
 ![Résultat tests Travis CI](/images/posts/integration-continue-deploiement-continu-django-docker-travis-p1/dashboard-travis-ci-succes.jpeg)
 
@@ -337,16 +347,17 @@ Avant de passer au déploiement automatique nous allons devoir configurer le mod
 
 Pour cela nous ajoutons dans le fichier requirements.txt le serveur uwsgi, ce qui nous donne un fichier requirements.txt qui à la forme suivante
 
-```
+{% highlight shell %}
 Django>=1.8,<2.0
 uwsgi
-```
+{% endhighlight %}
+
 
 Nous allons aussi ajouter un entrypoint à notre application Django qui lancera le serveur WSGI si aucun argument n'est fourni.
 
 Nous allons donc créer un fichier entrypoint.sh avec le contenu suivant
 
-```
+{% highlight shell %}
 #!/bin/bash
 #	Entrypoint
 #
@@ -362,17 +373,19 @@ if [ "$COMMAND" = "uwsgi" ]; then
 fi
 
 eval $COMMAND
-```
+{% endhighlight %}
+
 
 Pensez à bien mettre les droits en execution au script :
 
-```
+{% highlight shell %}
 chmod
-```
+{% endhighlight %}
+
 
 Enfin nous allons modifier notre Dockerfile pour prendre en compte l'EntryPoint
 
-```
+{% highlight shell %}
 FROM python:2.7
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
@@ -380,12 +393,11 @@ WORKDIR /code
 ADD requirements.txt /code/
 RUN pip install -r requirements.txt
 ADD . /code/
-
 ENTRYPOINT ["./entrypoint.sh"]
-
 RUN chmod +x /code/entrypoint.sh
-
 CMD ["./entrypoint.sh", "uwsgi"]
-```
+{% endhighlight %}
+
+
 
 Nous constatons qu'avec peu d'investissement en temps nous pouvons facilement intégrer Travis dans nos projets et donc avoir une démarche automatisée de vérification de l'application. Il est d'ailleurs possible de rajouter d'autres informations comme la couverture en tests du code mais aussi de vérifier si le code respecte bien la charte de l'entreprise (CamelCase ...). Lors du prochain article nous mettrons en place le déploiement automatique sur Heroku.
