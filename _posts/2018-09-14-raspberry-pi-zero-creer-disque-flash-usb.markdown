@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Raspberry Pi Zero w : Creer un disque flash USB"
+title:  "Raspberry Pi Zero w : Créer un disque flash USB"
 date:   2018-09-14 11:01:00 +0200
 categories: linux kernel usb device
 long_description: Découvrez comment votre Raspberry pi peut faire office de disque flash USB.
@@ -17,7 +17,7 @@ Pour réaliser une clé usb nous allons devoir effectuer les opérations suivant
 * Créer une image, ajouter une partition et la formater.
 * Charger le module noyau correspondant.
 
-Il faudra réaliser les opérations suivantes depuis un terminal (distant ou local) de votre Raspberry. 
+Il faudra réaliser les opérations suivantes depuis un terminal (distant ou local) de votre Raspberry.
 
 ## Création d'une image disque
 
