@@ -10,14 +10,14 @@ thumbnail: /images/posts/raspberry-pi-zero-w-creer-disque-flash-usb/thumbnail.pn
 
 Le noyau Linux fournit un ensemble de modules catégorisés dans "USB Gadget" qui permettent la création de périphériques USB. Vous y trouverez les périphériques de stockage, webcams, audio etc...
 
-La Raspberry pi Zero dispose d'un port USB qui peut fonctionner comme périphérique, couplé au module noyau g_mass_storage nous allons pouvoir mettre en place notre clé USB virtuelle.
+La Raspberry pi Zero dispose d'un port USB qui peut fonctionner comme périphérique, couplé au module noyau g_mass_storage nous allons pouvoir mettre en place notre clé USB virtuelle. Celà signifie que si nous branchons le port USB de la raspberry pi à un PC nous verrons une clé USB connectée.
 
 Pour réaliser une clé usb nous allons devoir effectuer les opérations suivantes :
 
 * Créer une image, ajouter une partition et la formater.
 * Charger le module noyau correspondant.
 
-Connectez-vous en ssh sur votre périphérique :
+Il faudra réaliser les opérations suivantes depuis un terminal (distant ou local) de votre Raspberry. 
 
 ## Création d'une image disque
 
