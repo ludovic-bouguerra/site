@@ -8,7 +8,7 @@ layout: default
 		<div class="article-head">
       {% if post.thumbnail %}
       <div class="thumbnail">
-        <img src="{{post.thumbnail}}" />
+        <a href="{{ site.url }}{{ post.url }}"><img src="{{post.thumbnail}}" /></a>
         <h2 class="title"><a href="{{ site.url }}{{ post.url }}" class="js-pjax">{{ post.title }}</a></h2>
       </div>
       {% else %}
