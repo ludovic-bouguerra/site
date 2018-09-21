@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Android - Créer une application native"
+title:  "Android - Développer une application en C"
 date:   2018-09-20 19:30:00 +0200
 categories: android ndk
-long_description: Cet article présente comment créer sa propre application native Android.
+long_description: Cet article présente comment développer une application en C Android en utilisant le native developement kit.
 thumbnail: /images/posts/creer-application-native-android/thumbnail.png
 
 ---
