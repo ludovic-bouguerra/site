@@ -4,7 +4,7 @@ title:  "Développement multimédia - Anatomie d'une box TV"
 date:   2018-09-30 19:30:00 +0200
 categories: box tv multimédia freebox
 long_description: Cet article présente l'architecture matérielle d'une box télévision, nous verrons également les utilitaires qui sont utilisés pour générer une distribution.
-thumbnail: /images/posts/developpement-multimedia-comprendre-l-edid/thumbnail.png
+thumbnail: /images/posts/developpement-multimedia-anatomie-box-tv/thumbnail.png
 
 ---
 
