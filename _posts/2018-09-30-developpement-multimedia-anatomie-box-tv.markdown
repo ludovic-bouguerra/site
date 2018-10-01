@@ -8,124 +8,34 @@ thumbnail: /images/posts/developpement-multimedia-comprendre-l-edid/thumbnail.pn
 
 ---
 
+Dans cet article je vais faire une rapide synthèse présentant l'architecture d'une box télévision. La première partie présentera l'architecture matérielle ensuite nous verrons quels outils sont utilisés pour générer les systèmes d'exploitations.
 
 ## Architecture matérielle
 
+L'architecture matérielle diffère peu entre les différents fabricants. Les modèles de puces sont choisis en fonction de la politique d'entreprise et technologique. Les concepts resteront donc identiques.
 
-![](/images/posts/developpement-multimedia-anatomie-box-tv/board.png)
+Les circuits imprimés des set top box sont similaire à celui présenté ci dessous :   
 
+![](/images/posts/developpement-multimedia-anatomie-box-tv/board.png){: style="text-align: center;"}
 
-<table>
-  <tr>
-    <td>
-      Voltage Regulators
-    </td>
-    <td>Régulateurs de tensions
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Rôle
-    </td>
-    <td>
-      Adapter les tensions selon la documentation de chaque composant.
-    </td>    
-  </tr>
-</table>
+La première fonction commune à tout système éléctronique, la source d'alimentation. La partie **voltage regulators** regroupe les systèmes permettant d'adapter les tensions selon la documentation de chaque composant.
 
-<table>
-  <tr>
-    <td>SOC</td>
-    <td>System on chip</td>
-  </tr>
-  <tr>
-    <td>
-      Fonctionnalités
-    </td>
-    <td>
-    </td>    
-  </tr>
-  <tr>
-    <td>
-      Multimédia :
-    </td>
-    <td>
-      Encodage H264 / Décodage H264
-    </td>   
-  </tr>  
-  <tr>
-    <td>
-      Radio
-    </td>
-    <td>
-      WIFI / BT
-    </td>   
-  </tr>  
-  <tr>
-    <td>
-      Acteurs
-    </td>
-    <td>
-      Broadcom / Realtek / Intel / ST
-    </td>   
-  </tr>  
-</table>
+Ensuite on y trouve le **SOC**, System On Chip il s'agit de l'élément principal du système il assure le rôle d'un processeur offrant des fonctionnalités supplémentaires parmi lesquelles on retrouve :
+- une partie dédiée au traitement vidéo et multimédia, elle permet l'encodage et le décodage d'un flux H264 sans ajouter de charge supplémentaire au processeur.
+- une partie radio/communication, offrant la possibilité de se connecter / d'être hotspot WIFI, de communiquer en bluetooth.
 
-<table>
-  <tr>
-    <td>
-      Tunner TV
-    </td>
-    <td>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Rôle
-    </td>
-    <td>
-    Recevoir des flux provenant du cable / du satellite.
-    </td>    
-  </tr>
-</table>
+La plus-part des SOC sont basées sur des architecture ARM pour la partie computing bien qu'Intel tente de se mettre sur ce marché. (Le Freebox player est par exemple équipé d'une Intel Atom source: [Wikipedia](https://fr.wikipedia.org/wiki/Freebox)). Parmi les constructeurs on trouve : Broadcom, Realtek, Intel, ST.
 
+Elles sont également équipées d'un **Tuner TV** il s'agit d'une carte permettant de récupérer un signal provenant d'une fréquence donnée. Elles servent à recevoir le signal sattelite (DVB-S), terrestre (DVB-T) ou cable (DVB-C) en fonction du rôle du décodeur. Ils sont connectés soit via le bus USB soit PCI. Les tuners TV sont administrables, sous linux avec l'API Video4Linux.
 
-<table>
-  <tr>
-    <td>
-      HDMI Transmitter
-    </td>
-    <td>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Rôle
-    </td>
-    <td>
-      Transmettre le flux vidéo à un écran
-    </td>    
-  </tr>
-</table>
+Enfin deux composants permettent l'intégration du système avec une télévision et un réseau local. Le premier est un **transmetteur HDMI** il permet de transmettre les images en respectant le protocole HDMI. Et un **Ethernet PHY** qui permet de s'occuper de la partie transmission / réception des données sur le réseau. Il assure la partie physique de la transmission, le reste étant assuré par le SOC.
 
-<table>
-  <tr>
-    <td>
-      Ethernet PHY
-    </td>
-    <td>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Rôle
-    </td>
-    <td>
-      Assurer les communications réseaux
-    </td>    
-  </tr>
-</table>
-
-## Architecture logicielle
+## Système d'exploitation
 
 La majeure partie du temps il s'agit d'une distribution Linux. Plus récemment les systèmes intègrent Android TV.
+
+[AOSP](https://source.android.com/) : Android Open Source Project, Il s'agit du système permettant de fabriquer l'image Android.
+
+[Yocto](https://www.yoctoproject.org/) est un système permettant de générer une distribution Linux complète. Très complet, et très structuré il permet au détriment d'une prise en main un peu plus longue que Buildroot de générer un système avec gestion des paquets (ou non) pour de nombreuses cibles.
+
+[Buildroot](https://www.buildroot.org/)  est un système permettant de générer une distribution Linux  plus simple d'accès que Yocto, il est toutefois plus limité.  
