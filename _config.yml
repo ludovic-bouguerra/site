@@ -14,9 +14,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Ludovic Bouguerra
+author: Ludovic Bouguerra
 email: bouguerra.ludovic@gmail.com
 phone: +33 6 81 93 15 60
 description: Développeur freelance Web / Video / Embarqué / Odoo - Marseille / Aix / Montréal.
+picture: /images/profile.jpg
+headline1: Entrepreneur et développeur informatique
+headline2: "#Web #Video #Embarqué #Architecture #Docker #Odoo"
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.ludovicbouguerra.fr" # the base hostname & protocol for your site, e.g. http://example.com
 technologies:
@@ -52,6 +57,15 @@ technologies:
     name: Wowza media server
   - picture: images/home/technologies/playframework.png
     name: Play framework
+portfolio:
+  - picture: images/home/portfolio/kalyzee.png
+    name: Kalyzée
+  - picture: images/home/portfolio/epitech.png
+    name: Epitech
+  - picture: images/home/portfolio/amu.png
+    name: Aix Marseille Université
+  - picture: images/home/portfolio/cnrs.png
+    name: Laboratoire d'Astrophysique de Marseille
 twitter_username: LBouguerra
 github_username:  ludovic-bouguerra
 linkedin: http://fr.linkedin.com/pub/ludovic-bouguerra/34/5a/214/

@@ -90,7 +90,7 @@
             <li>Développement application web</li>
             <li>Résolution problème production</li>
 
-            <li class="amount">699 € / Jour</li>
+            <li class="amount">699 € / jour</li>
           </ul>
         </div>
         <div class="one-third column pricing">
@@ -99,7 +99,7 @@
             <li>Analyse du m&eacute;tier</li>
             <li>Plan de développement</li>
             <li>Pr&eacute;parer montée en charge</li>
-            <li class="amount">999 € / Jour</li>
+            <li class="amount">999 € / jour</li>
           </ul>
         </div>
         <div class="one-third column pricing">
@@ -108,7 +108,7 @@
             <li>Sur site</li>
             <li>D&eacute;veloppement embarqu&eacute;</li>
             <li>Et / ou d&eacute;veloppement vid&eacute;o</li>
-            <li class="amount">1299 € / Jour</li>
+            <li class="amount">1299 € / jour</li>
 
           </ul>
         </div>
@@ -121,20 +121,12 @@
     	<div class="container">
             <div class="sixteen columns"><h1>Références</h1></div>
             <div class="references">
+              {% for portfolio in site.portfolio %}
                 <div class="four columns">
+                  <div class="icon"><img src="{{portfolio.picture}}" alt="{{portfolio.name}}" /></div>
+                </div>
+              {% endfor %}
 
-                        <div class="icon"><img src="/images/home/portfolio/kalyzee.png" class="attachment-post-thumbnail wp-post-image" alt="Kalyzee"></div>
-                </div>
-                <div class="four columns">
-                        <div class="icon"><img src="/images/home/portfolio/epitech.png" class="attachment-post-thumbnail wp-post-image" alt="Epitech"></div>
-                </div>
-                <div class="four columns">
-                        <div class="icon"><img src="/images/home/portfolio/amu.png" class="attachment-post-thumbnail wp-post-image" alt="Aix Marseille Université"></div>
-                </div>
-                <div class="four columns">
-
-                        <div class="icon"><img src="/images/home/portfolio/cnrs.png" class="attachment-post-thumbnail wp-post-image" alt="cnrs"></div>
-                </div>
             </div>
         </div>
     </section>
