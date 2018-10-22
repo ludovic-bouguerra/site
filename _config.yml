@@ -20,53 +20,37 @@ description: Développeur freelance Web / Video / Embarqué / Odoo - Marseille /
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.ludovicbouguerra.fr" # the base hostname & protocol for your site, e.g. http://example.com
 technologies:
-  aosp:
-    picture: image/home/technologies/aosp.png
+  - picture: images/home/technologies/aosp.png
     name: Android AOSP
-  yocto:
-    picture: image/home/technologies/yocto.png
+  - picture: images/home/technologies/yocto.png
     name: Yocto
-  buildroot:
-    picture: image/home/technologies/buildroot.png
+  - picture: images/home/technologies/buildroot.png
     name: Buildroot
-  linux:
-    picture: image/home/technologies/linux.png
+  - picture: images/home/technologies/linux.png
     name: Linux, drivers
-  gstreamer:
-    picture: image/home/technologies/gstreamer.png
+  - picture: images/home/technologies/gstreamer.png
     name: Gstreamer
-  symfony:
-    picture: image/home/technologies/symfony.png
+  - picture: images/home/technologies/symfony.png
     name: Symfony
-  google:
-    picture: image/home/technologies/google.png
+  - picture: images/home/technologies/google.png
     name: Google Analytics
-  cas:
-    picture: image/home/technologies/cas.png
+  - picture: images/home/technologies/cas.png
     name: CAS
-  jquery:
-    picture: image/home/technologies/jquery.png
+  - picture: images/home/technologies/jquery.png
     name: JQuery
-  git:
-    picture: image/home/technologies/git.png
+  - picture: images/home/technologies/git.png
     name: Git
-  proxmox:
-    picture: image/home/technologies/proxmox.png
+  - picture: images/home/technologies/proxmox.png
     name: Proxmox
-  odoo:
-    picture: image/home/technologies/openerp.png
+  - picture: images/home/technologies/openerp.png
     name: Odoo
-  java:
-    picture: image/home/technologies/java.png
+  - picture: images/home/technologies/java.png
     name: Java
-  debian:
-    picture: image/home/technologies/debian.png
+  - picture: images/home/technologies/debian.png
     name: Debian
-  wowza:
-    picture: image/home/technologies/wowza.png
+  - picture: images/home/technologies/wowza.png
     name: Wowza media server
-  play:
-    picture: image/home/technologies/playframework.png
+  - picture: images/home/technologies/playframework.png
     name: Play framework
 twitter_username: LBouguerra
 github_username:  ludovic-bouguerra
