@@ -21,7 +21,7 @@ description: Développeur freelance Web / Video / Embarqué / Odoo - Marseille /
 picture: /images/profile.jpg
 headline1: Entrepreneur et développeur informatique
 headline2: "#Web #Video #Embarqué #Architecture #Docker #Odoo"
-
+ga: 'UA-37459187-1'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.ludovicbouguerra.fr" # the base hostname & protocol for your site, e.g. http://example.com
 technologies:
