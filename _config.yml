@@ -35,28 +35,28 @@ technologies:
     name: Linux, drivers
   - picture: images/home/technologies/gstreamer.png
     name: Gstreamer
-  - picture: images/home/technologies/symfony.png
-    name: Symfony
-  - picture: images/home/technologies/google.png
-    name: Google Analytics
-  - picture: images/home/technologies/cas.png
-    name: CAS
-  - picture: images/home/technologies/jquery.png
-    name: JQuery
-  - picture: images/home/technologies/git.png
-    name: Git
-  - picture: images/home/technologies/proxmox.png
-    name: Proxmox
-  - picture: images/home/technologies/openerp.png
-    name: Odoo
-  - picture: images/home/technologies/java.png
-    name: Java
-  - picture: images/home/technologies/debian.png
-    name: Debian
+  - picture: images/home/technologies/ffmpeg.png
+    name: FFmpeg
+  - picture: images/home/technologies/airplay.png
+    name: Airplay
+  - picture: images/home/technologies/chromecast.png
+    name: Chromecast
+  - picture: images/home/technologies/nginx.png
+    name: Nginx
   - picture: images/home/technologies/wowza.png
     name: Wowza media server
-  - picture: images/home/technologies/playframework.png
-    name: Play framework
+  - picture: images/home/technologies/docker.png
+    name: Docker
+  - picture: images/home/technologies/aws.png
+    name: AWS
+  - picture: images/home/technologies/react.png
+    name: React / React Native
+  - picture: images/home/technologies/django.png
+    name: Django
+  - picture: images/home/technologies/celery.png
+    name: Celery
+  - picture: images/home/technologies/symfony.png
+    name: Symfony
 portfolio:
   - picture: images/home/portfolio/kalyzee.png
     name: Kalyzée
