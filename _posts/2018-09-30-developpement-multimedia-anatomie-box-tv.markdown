@@ -39,3 +39,7 @@ La majeure partie du temps il s'agit d'une distribution Linux. Plus récemment l
 [Yocto](https://www.yoctoproject.org/) est un système permettant de générer une distribution Linux complète. Très complet, et très structuré il permet au détriment d'une prise en main un peu plus longue que Buildroot de générer un système avec gestion des paquets (ou non) pour de nombreuses cibles.
 
 [Buildroot](https://www.buildroot.org/)  est un système permettant de générer une distribution Linux  plus simple d'accès que Yocto, il est toutefois plus limité.  
+
+## Développement du logiciel
+
+Pour la mise en place de l'acquisition vidéo, le décodage H264, la sélection du canal sur le tunner, le picture in picture. Le framework multimédia open source  [Gstreamer](https://gstreamer.freedesktop.org/) est souvent utilisé. Disponible aussi bien sur de nombreuses architectures et bénéficiant d'une grande communauté il permet 

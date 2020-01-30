@@ -5,6 +5,7 @@ date:   2012-12-26 09:00:00 +0200
 categories: vidéo seo
 long_description: Rendre visible des vidéos sur internet n'est pas si simple. La problématique de la visibilité des médias sur internet est qu'aucun moteur de recherche n'indexe le contenu des vidéos.
 redirect_from: ""
+comments: true
 
 ---
 Rendre visible des vidéos sur internet n'est pas si simple. La problématique de la visibilité des médias sur internet est qu'aucun moteur de recherche n'indexe le contenu des vidéos. C'est sur quoi je travaille actuellement dans le cadre de mon entreprise Kalyzee. Il y a quelques trucs et astuces que l'on peut donner afin de rendre vos vidéos visibles sur internet.
