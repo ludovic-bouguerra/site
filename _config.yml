@@ -17,6 +17,7 @@ title: Ludovic Bouguerra
 author: Ludovic Bouguerra
 email: bouguerra.ludovic@gmail.com
 phone: +33 6 81 93 15 60
+
 description: Entrepreneur et développeur freelance multimédia web / mobile / embarqué
 picture: /images/profile.jpg
 headline1: Développeur et formateur freelance 
@@ -66,6 +67,14 @@ portfolio:
     name: Aix Marseille Université
   - picture: images/home/portfolio/cnrs.png
     name: Laboratoire d'Astrophysique de Marseille
+  - picture: images/home/portfolio/gep.png
+    name: Groupe École pratique 
+  - picture: images/home/portfolio/otonomy-aviation.png
+    name: Otonomy aviation 
+  - picture: images/home/portfolio/cs.png
+    name: CS Group
+  - picture: images/home/portfolio/colas.png
+    name: Colas     
 twitter_username: LBouguerra
 github_username:  ludovic-bouguerra
 linkedin: http://fr.linkedin.com/pub/ludovic-bouguerra/34/5a/214/
